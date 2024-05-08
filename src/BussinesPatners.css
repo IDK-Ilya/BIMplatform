@@ -1,0 +1,57 @@
+.bussPart{
+    width: 75%;
+    background-color: white;
+    display: inline-block;
+     border-radius: 10px;
+     margin-left: 175px;
+  }
+.bussPart .accordion-button.collapsed {
+    font-size: 24px; /* Увеличенный размер шрифта для неактивных заголовков */
+    background-color: #F6F1C5;
+  }
+  
+  .bussPart.accordion-item {
+    border: none !important;  /* Убрать стандартные границы */
+    border-radius: 10px !important;  /* Закругленные края для всех элементов аккордеона */
+    overflow: hidden;  /* Предотвращает выход содержимого за рамки закругленных краев */ 
+    background-color: #F6F1C5;  
+  }
+  
+  /* Стили для активного заголовка аккордеона */
+  .bussPart .accordion-button:not(.collapsed) {
+    background-color: #F6F1C5; /* Полупрозрачный фиолетовый цвет для заголовка при раскрытии */
+    color: black;  /* Черный цвет текста */
+    font-size: 24px;  /* Размер шрифта заголовка */
+    padding-bottom: 10px;
+  }
+  
+  /* Стили для контейнера активного элемента аккордеона */
+  .bussPart .accordion-item:not(.collapsed) {
+    background-color: #F6F1C5 !important; /* Полупрозрачный фиолетовый цвет фона для всего элемента */
+    color: black;  /* Черный цвет текста */
+    font-size: 20px;  /* Размер шрифта тела */
+  }
+  
+  /* Стили для тела активного аккордеона */
+  .bussPart .accordion-collapse.show {
+    background-color: #F6F1C5; /* Полупрозрачный фиолетовый цвет фона для тела аккордеона */
+    color: black;  /* Черный цвет текста */
+  }
+  
+  .bussPart .accordion-button {
+    border-color: black; /* Фиолетовая граница, совпадающая с цветом фона */
+  }
+  
+  .aaa{
+    background-color: red;
+  }
+
+.card1{
+    height: 45px;
+    padding-right: 20px;
+}
+
+.cardText{
+    margin-top: 12px;
+    padding-left: 100px;
+}

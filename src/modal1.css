@@ -1,0 +1,84 @@
+ .openCardStyle .modHead  {
+    font-size: 40px;
+}
+
+.openCardStyle .modal-dialog {
+   
+    margin: 0 auto !important;
+    border: 1px solid #A387C4 !important;
+    box-shadow: 0 4px 8px #A387C4 !important;
+}
+
+
+
+.headBoard {
+    border-radius: 10px; /* Слегка закругленные углы */
+    border: 1px solid black; /* Черная тонкая линия */
+    padding: 5px 10px; /* Немного отступа вокруг текста */
+    display: inline-block; /* Элемент занимает только необходимую ширину */
+    background-color: white; /* Белый фон за текстом */
+}
+.cardImg1{
+    border-radius: 10px;
+}
+
+  
+.schedule-day {
+    background-color: #A387C4; /* Фиолетовый цвет фона */
+    border-radius: 10px;
+    padding: 8px;
+    color: white; /* Белый цвет текста */
+    text-align: center; /* Центрирование текста внутри колонки */
+    font-weight: bold; /* Жирное начертание для дней */
+    font-size: 16px;
+}
+
+.schedule-hours {
+    padding: 8px 0; /* Вертикальный padding для выравнивания с днем недели */
+    text-align: left; /* Расположение времени слева */
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.cardImg2{
+    width: 250px;
+    border-radius: 10px;
+}
+
+/* Для планшетов */
+@media (max-width: 768px) {
+    .openCardStyle .modHead {
+        font-size: 30px; /* Уменьшенный размер шрифта для заголовков модального окна */
+    }
+
+    .schedule-day, .schedule-hours {
+        font-size: 14px; /* Уменьшенный размер шрифта для элементов расписания */
+    }
+
+    .cardImg2 {
+        width: 200px; /* Уменьшенная ширина изображений карточек */
+    }
+}
+
+/* Для мобильных телефонов */
+@media (max-width: 480px) {
+    .openCardStyle .modHead {
+        font-size: 24px; /* Ещё меньший размер шрифта для заголовков модального окна */
+    }
+
+    .headBoard {
+        font-size: 14px; /* Уменьшенный размер шрифта для элементов с заголовком */
+        padding: 3px 6px; /* Уменьшенные отступы вокруг текста */
+    }
+
+    .schedule-day, .schedule-hours {
+        font-size: 12px; /* Меньший размер шрифта для расписания */
+        padding: 6px; /* Уменьшенный отступ */
+    }
+
+    .cardImg2 {
+        width: 100%; /* Полная ширина изображений карточек */
+        max-width: 150px; /* Максимальная ширина изображения */
+    }
+}

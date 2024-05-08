@@ -1,0 +1,89 @@
+.banner {
+    background-color: #F1F1F1; /* Подберите точный цвет фона */
+    padding: 0 ; /* Отступы сверху и снизу баннера */
+   
+   
+  }
+  
+  
+  
+  .banner-title {
+    font-size: 4rem;
+    font-weight: bold;
+    background: -webkit-linear-gradient(to right, #6E56CF, #F8C9FF, #F9D1FF); /* Градиент для Webkit-браузеров */
+    background: linear-gradient(to left, #6E56CF, #F8C9FF, #F9D1FF); /* Стандартный градиент слева направо */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  
+  
+  .banner-subtitle {
+    font-size: 4rem;
+    font-weight: bold;
+    background: -webkit-linear-gradient(to right, #6E56CF, #F6B8FF); /* Градиент для Webkit-браузеров */
+    background: linear-gradient(to left, #6E56CF, #F6B8FF); /* Стандартный градиент слева направо */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    text-align: center;
+  }
+  
+  .banner-description {
+    font-size: 1rem; /* Размер шрифта для описания */
+    color: #000000; /* Цвет текста */
+    position: relative; /* Для позиционирования псевдоэлемента */
+    border-radius: 25px; /* Скругление углов подложки */
+    padding: 5px 10px 5px 0px; /* Отступы внутри подложки */
+    margin-top: 10px; /* Отступ сверху для подложки */
+    text-align: center;
+    display: flex; /* Включаем Flexbox */
+    flex-direction: column; /* Стекаем элементы вертикально */
+    align-items: center; /* Центрирование по горизонтали */
+    justify-content: center; /* Центрирование по вертикали */
+    padding-right: 20px;
+    }
+
+    .platform-box{
+    
+    background: -webkit-linear-gradient(to right, #F5BFFE80, #6F57CF80); /* Градиент для Webkit-браузеров */
+    background: linear-gradient(to right, #F5BFFE80, #6F57CF80); /* Стандартный градиент слева направо */
+    border-radius: 20px; /* Скругление углов */
+    display: inline-block; /* Блок под текст */
+    padding: 10px 20px; /* Внутренние отступы */
+    margin-top: 20px; /* Отступ сверху */
+    position: relative; /* Для позиционирования псевдоэлемента */
+    padding-right: 20px; /* Место для точки справа */
+          
+    }
+  
+    .platform-box::after {
+        content: ''; /* Псевдоэлемент должен иметь свойство content */
+        position: absolute;
+        top: 50%; /* Выровняем по вертикали */
+        transform: translateY(-50%); /* Центрирование по вертикали */
+        width: 8px; /* Размер точки */
+        height: 8px; /* Размер точки */
+        background: #000; /* Цвет точки */
+        border-radius: 50%; /* Сделаем её круглой */
+        margin-left: 5px;
+      }
+  /* Можно добавить медиа-запросы для адаптации размеров текста к разным размерам экрана */
+  @media (max-width: 768px) {
+    .banner-title {
+      font-size: 3rem; /* Уменьшенный размер шрифта для мобильных устройств */
+    }
+  
+    .banner-subtitle {
+      font-size: 1.5rem; /* Уменьшенный размер шрифта для мобильных устройств */
+    }
+  
+    .banner-description {
+      font-size: 0.8rem; /* Уменьшенный размер шрифта для мобильных устройств */
+    }
+  }
+  

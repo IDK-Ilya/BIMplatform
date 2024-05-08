@@ -1,0 +1,108 @@
+
+.carousel-container1 {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease-in-out;
+  background: -webkit-linear-gradient(to right, #1D58C0, #151718); /* Градиент для Webkit-браузеров */
+  background: linear-gradient(to right, #1D58C0, #151718); /* Стандартный градиент слева направо */
+  border-radius: 10px;
+}
+
+.carousel-container1 .card {
+  
+  background: -webkit-linear-gradient(to right, #1D58C0, #151718); /* Градиент для Webkit-браузеров */
+  background: linear-gradient(to right, #1D58C0, #151718); /* Стандартный градиент слева направо */
+  border: none;
+}
+
+
+.slick-slide {
+  padding: 10px;
+}
+.slideHead{
+  text-align: center;
+}
+
+.carousel-container1 .btnSlider{
+  background-color: white;
+  color: black;
+  align-items: left;
+}
+
+
+.carousel-container1 .eventCardImg{
+  width: 100px;
+  border-radius: 50%;
+  padding-top: 5px;
+}
+
+.carousel-container1 .eventHeadContainer {
+
+  display: flex;
+  align-items: center; /* Центрирует содержимое по вертикали */
+  justify-content: left; /* Выравнивает содержимое по левому краю */
+  height: 100px; /* Примерная высота контейнера, настраивайте по вашему усмотрению */
+  padding-left: 5px; /* Отступ слева для отступа текста от края */
+  
+}
+
+
+.carousel-container1 .eventHead{
+  font-size: 21px;
+  text-align: left;
+  color: white;
+  margin-left: -30%;
+}
+
+.carousel-container1 .eventBody {
+  text-align: left; /* Выравнивание текста по левому краю */
+  padding-left: 10px; /* Добавление небольшого отступа слева, если нужно */
+}
+
+.carousel-container1.eventBody h2, .eventBody h4 {
+  margin: 0; /* Удаление стандартных отступов у заголовков для более тесного расположения */
+}
+
+.carousel-container1.carousel-container1.colorTime{
+  color:#7EA8F9;
+}
+
+.carousel-container1 .h2{
+  color: white;
+}
+
+.colorSlideText{
+  color: white;
+}
+
+.colorSlideText1{
+  color: #aaa;
+}
+
+.colorSlideText2{
+  color: white;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    align-items:center ; /* Aligns it at the top */
+    margin-left: -8%;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    align-items: center; 
+    margin-right: -8%;/* Aligns it at the bottom */
+}
+
+.slide .btnColor{
+    width: 70%; /* Растягиваем кнопку по ширине */
+    background-color: white; /* Фон кнопки черный */
+    color: #000; /* Текст кнопки белый */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 5px;
+    margin-bottom: 10px;
+ 
+}

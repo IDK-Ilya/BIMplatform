@@ -1,0 +1,64 @@
+html .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    
+  }
+  
+  .footer-col {
+    margin-bottom: 20px;
+    padding-left: 10%;
+  }
+  
+  .footer-col h5 {
+    margin-bottom: 20px;
+  }
+  
+  .footer-col ul {
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+  }
+  
+  .footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+   
+  }
+  
+  .footer-col ul li a:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+  }
+  
+  .footer-text {
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 0.9em;
+  }
+  
+  .footer-top-border {
+    border-top: 1px solid #aaa; /* Светло-серая линия сверху */
+    padding-top: 10px; /* Отступ сверху, чтобы отделить текст от линии */
+  }
+  
+  .footer-text-row {
+    display: flex; /* Использование флексбокса для выравнивания элементов */
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование содержимого по вертикали */
+    flex-wrap: wrap; /* Если элементы не помещаются, они перенесутся на новую строку */
+  }
+  
+  .footer-text {
+    margin: 0 10px; /* Отступы справа и слева от текста */
+    white-space: nowrap; /* Текст не будет переноситься на новую строку */
+    color: #aaa; /* Цвет текста */
+    font-size: 0.9em; /* Размер шрифта */
+  }
+  .footer-policy {
+    margin-right: 60%; /* Добавьте нужное расстояние между текстами */
+  }
+  
+ 
+  

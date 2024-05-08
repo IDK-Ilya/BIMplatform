@@ -1,0 +1,566 @@
+/* Стили для Tabs, если вам нужно что-то специфическое */
+.nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+    
+  }
+  
+  .nav-tabs .nav-item {
+    margin-bottom: -2px;
+    padding: 10px;
+  }
+  
+  .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    background-color: #fff; /* Цвет фона для неактивных вкладок */
+    color: #000; /* Цвет текста для неактивных вкладок */
+    margin-right: 2px; /* Расстояние между вкладками */
+  }
+  
+  html .nav-tabs .nav-link.active {
+    color: #fff; /* Цвет текста для активной вкладки */
+    background-color: #007bff; /* Цвет фона для активной вкладки */
+    border-color: #dee2e6 #dee2e6 #fff;
+  }
+  
+  .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: #e9ecef #e9ecef #dee2e6;
+  }
+  
+.main-page{
+  background-color: #000;
+   
+}
+
+/* Применяем фон и центрирование текста для первой колонки */
+.text-center {
+  background-color: #000; /* Устанавливаем белый фон для текста */
+}
+
+/* Стилизация для кнопок "Преимущества" */
+.btn-light {
+  background-color: #fff; /* Белый фон для кнопок */
+  border: 1px solid #ddd; /* Граница для кнопок */
+  color: #333; /* Цвет текста кнопок */
+}
+
+/* Отступы для кнопок и их ширина */
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.w-75 {
+  width: 75%!important; /* Задаем ширину кнопок 75% от родительского элемента */
+}
+
+/* Дополнительный отступ вокруг колонки текста */
+.p-5 {
+  padding: 3rem!important; /* Больше внутреннего отступа */
+}
+
+.text-style{
+  color: #fff;
+  text-align:center;
+}
+
+.text-style1{
+  color: #fff;
+  text-align:center;
+  font-size: 36px;
+}
+
+.img{
+  width:250px;
+  height: 150px;
+  position: relative;
+      z-index: 1;
+}
+
+.events-carousel .carousel-item {
+  display: flex;
+  justify-content: center; /* Центрирование карточки внутри слайда */
+}
+
+.event-card {
+  width: 300px; /* Ширина карточки */
+  margin: 20px; /* Отступы вокруг карточки */
+  background: #fff; /* Белый фон карточки */
+  border: none; /* Убрать стандартную границу */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень карточки */
+}
+
+
+
+/* Адаптивность и другие стили по желанию */
+.registration-block-container {
+  background-color: black; /* Установка черного фона для всего контейнера */
+  color: white; /* Белый цвет текста для контента на черном фоне */
+  padding: 30px 0; /* Вертикальные отступы для контейнера */
+}
+
+.registration-block-container .textstyle,
+.registration-block-container .textstyle1 {
+  text-align: center; /* Центрирование заголовка и подзаголовка */
+  color: white; /* Белый цвет текста */
+}
+
+.activity-card {
+  background-color: black; /* Черный фон для карточек */
+  color: white; /* Белый текст внутри карточек */
+  border: none; /* Убираем границу карточек */
+  margin-bottom: 15px; /* Отступы снизу карточек */
+}
+
+.activity-card .card-img-top {
+  background-color: white; /* Черный фон для изображения в карточке */
+  border-radius: 0; /* Убрать скругление углов изображения */
+}
+
+.activity-card .card-body {
+  padding: 1.25rem; /* Внутренние отступы для содержимого карточек */
+}
+
+
+
+/* Центрирование карточек внутри их колонок */
+.registration-block-container .row > [class^='col-'] {
+  display: flex;
+  justify-content: center; /* Горизонтальное центрирование */
+  flex-direction: column; /* Стек контента вертикально */
+  align-items: center; /* Вертикальное центрирование */
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card-text{
+  color: white;
+}
+
+.card{
+  border-color: white;
+  max-width: 60%;
+  text-align: center;
+}
+
+.slider-container {
+  padding: 20px;
+  background-color: #2C2C54; /* Темно-синий фон, как на изображении */
+  color: white; /* Белый текст */
+}
+
+.slider-container h2,
+.slider-container p {
+  text-align: center; /* Центрирование текста */
+}
+
+.partner-card {
+  background-color: #3E3E7A; /* Фон карточек, как на изображении */
+  border: none; /* Убрать границы карточек */
+  color: white; /* Белый текст внутри карточек */
+  margin: 0 auto; /* Центрирование карточек в слайде */
+}
+
+.partner-card .card-img-top {
+  width: 100%; /* Изображение растягивается на всю ширину */
+  object-fit: cover; /* Обрезка изображений под размер контейнера */
+}
+
+.slick-dots li button:before {
+  color: white; /* Цвет точек индикаторов слайдера */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #FFC107; /* Цвет активной точки */
+}
+
+/* Добавьте стили для корректировки положения и видимости кнопок-стрелок, если они нужны */
+.slick-prev,
+.slick-next {
+  color: white; /* Цвет стрелок */
+  z-index: 1;
+}
+
+
+/* Убрать белую полосу, вызванную выходом содержимого за пределы экрана */
+body {
+  overflow-x: hidden;
+}
+
+/* Правильное центрирование карточек */
+.registration-block-container .row {
+  justify-content: center; /* Центрируем карточки в ряду */
+}
+
+.registration-block-container .col-md-6 {
+  max-width: 100%; /* Ограничиваем ширину колонки */
+  display: flex;
+  justify-content: center; /* Центрирование содержимого колонок */
+  padding: 0; /* Убираем внутренние отступы */
+}
+
+/* Стиль для карточек */
+.card {
+  max-width: 30rem; /* Максимальная ширина карточки */
+  margin: 1rem; /* Отступы вокруг карточки */
+  /* Остальные стили оставляем без изменений */
+}
+
+/* Стиль для изображений внутри карточек */
+.card-img-top {
+  width: 100%; /* Изображение на всю ширину карточки */
+  height: auto; /* Высота изображения будет подстроена автоматически */
+}
+
+
+.mainPageBlock{
+  height:325px;
+}
+
+.coworking-banner {
+  background: #fff; /* белый фон */
+  padding: 20px;
+  border-radius: 10px; /* скругление углов */
+  border: 1px solid #A387C4;
+  box-shadow: 0 4px 8px #A387C4; /* лёгкая тень */
+  height:325px;
+}
+
+.textCowork {
+  color: black ; /* цвет текста */
+  margin-bottom: 10px; /* отступ снизу для заголовка */
+  font-weight: bold;
+  font-size: 40px;
+  padding-left: 100px;
+}
+
+
+.coBannerBack{
+  background-color: white;
+}
+
+ .event-banner {
+  background: #fff; /* белый фон */
+  padding: 20px;
+  border-radius: 10px; /* скругление углов */
+  border: 1px solid #000AFF;
+  box-shadow: 0 4px 8px #000AFF60; /* лёгкая тень */
+  width: 100%;
+  height: 325px;
+  
+}
+
+.event-banner .emoji {
+  width: 150px; /* ширина для эмодзи */
+  height: auto; /* автоматическая высота для сохранения пропорций */
+  margin: 0 5px; /* отступы вокруг эмодзи */
+}
+
+html .colorBTNEvent{
+  width: 200px; /* Фиксированная ширина кнопки */
+  /* Верхний отступ, если нужно */
+  background-color:#000AFF ;
+  border-color:#000AFF60;
+}
+
+
+.btn-container {
+  display: flex;      /* Используем Flexbox */
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+  align-items: center; /* Центрируем содержимое по вертикали, если нужно */
+  margin-top: -20px;
+  margin-bottom: 10px;
+ 
+
+}
+
+html .btn-container .btnSetting {
+  width: 200px; /* Фиксированная ширина кнопки */
+  /* Верхний отступ, если нужно */
+  background-color:#A387C4 ;
+  border-color:#A387C4;
+}
+
+.btnSetting :hover {
+  width: 200px; /* Фиксированная ширина кнопки */
+  /* Верхний отступ, если нужно */
+  background-color: #A387C5;
+  border-color:#A387C4;
+}
+
+.coworking-banner .emoji {
+  width: 150px; /* ширина для эмодзи */
+  height: auto; /* автоматическая высота для сохранения пропорций */
+  margin: 0 5px; /* отступы вокруг эмодзи */
+  height: 325px;
+}
+
+.bantext{
+  font-size: 35px;
+  margin: -4px !important; 
+  font-weight: lighter;
+  padding-left: 100px;
+}
+
+.zone{
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  min-height: 5vh;     
+}
+
+.business-banner {
+  background: #fff; /* белый фон */
+  padding: 20px;
+  border-radius: 10px; /* скругление углов */
+  border: 1px solid #DDAF0E60;
+  box-shadow: 0 4px 8px #DDAF0E60; /* лёгкая тень */
+  height: 325px;
+  
+}
+
+.business-banner .emoji {
+  width: 200px; /* ширина для эмодзи */
+  height: auto; /* автоматическая высота для сохранения пропорций */
+  margin: 0 5px; /* отступы вокруг эмодзи */
+}
+
+.bussinesText{
+  text-align: center;
+}
+
+.project-banner {
+  background: #fff; /* белый фон */
+  padding: 20px;
+  border-radius: 10px; /* скругление углов */
+  border: 1px solid #35212160;
+  box-shadow: 0 4px 8px #35212180; /* лёгкая тень */
+  height: 325px;
+}
+
+.project-banner .emoji {
+  width: 200px; /* ширина для эмодзи */
+  height: auto; /* автоматическая высота для сохранения пропорций */
+  margin: 0 5px; /* отступы вокруг эмодзи */
+}
+
+html .btnSetting.btnColor {
+  background-color: #87A7C4;
+  color: white;
+  border-color:#87A7C4;
+}
+
+.btnColor:hover {
+  background-color: #87A7C4; /* Немного темнее при наведении */
+}
+
+.science-banner{
+  background: #fff; /* белый фон */
+  padding: 20px;
+  border-radius: 10px; /* скругление углов */
+  border: 1px solid #578347;
+  box-shadow: 0 4px 8px #578347; /* лёгкая тень */
+  height: 325px;
+}
+
+.science-banner .emoji {
+  width: 250px; /* ширина для эмодзи */
+  height: auto; /* автоматическая высота для сохранения пропорций */
+  margin-top:  -10px; /* отступы вокруг эмодзи */
+  margin-left: 15px; 
+}
+
+html .btn-container .btnColorS{
+  background-color: #578347;
+  border-color: #578347;
+}
+
+.btnColorS :hover{
+  background-color: #3c612f;
+}
+
+.faq-section h2 {
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: 1px solid #ccc;
+}
+
+.card {
+  border: none;
+  border-radius: 10px; /* скругление углов */
+  border: 1px solid #A387C4;
+  box-shadow: 0 4px 8px #A387C4; 
+}
+
+
+.backColorFAQ{
+  background-color: white;
+}
+
+html .styleFAQ{
+  background-color: white;
+  width: 90%;
+  display: inline-block;
+  margin-left: 100px;
+}
+.styleFAQ1{
+ 
+  background-color: white;
+  width: 90%;
+  display: inline-block;
+  font-weight: bold;
+
+}
+
+
+/* Стили для неактивных (закрытых) заголовков аккордеона */
+html .accordion-button.collapsed {
+  font-size: 24px; /* Увеличенный размер шрифта для неактивных заголовков */
+}
+
+ html .accordion-item {
+  border: none !important;  /* Убрать стандартные границы */
+  border-radius: 10px !important;  /* Закругленные края для всех элементов аккордеона */
+  overflow: hidden;  /* Предотвращает выход содержимого за рамки закругленных краев */
+}
+
+/* Стили для активного заголовка аккордеона */
+html .accordion-button:not(.collapsed) {
+  background-color: #D1C3FB60; /* Полупрозрачный фиолетовый цвет для заголовка при раскрытии */
+  color: black;  /* Черный цвет текста */
+  font-size: 24px;  /* Размер шрифта заголовка */
+}
+
+/* Стили для контейнера активного элемента аккордеона */
+html .accordion-item:not(.collapsed) {
+  background-color: #D1C3FB60 !important; /* Полупрозрачный фиолетовый цвет фона для всего элемента */
+  color: black;  /* Черный цвет текста */
+  font-size: 20px;  /* Размер шрифта тела */
+}
+
+/* Стили для тела активного аккордеона */
+html .accordion-collapse.show {
+  background-color: #D1C3FB60; /* Полупрозрачный фиолетовый цвет фона для тела аккордеона */
+  color: black;  /* Черный цвет текста */
+}
+
+/* Стили для границы активного элемента аккордеона */
+html .accordion-button {
+  border-color: #D1C3FB60; /* Фиолетовая граница, совпадающая с цветом фона */
+}
+
+/* Дополнительные стили для заголовков и тела аккордеона */
+
+
+.CoworkTextSyle{
+  color: black;
+  text-align: left;
+  display: flex;
+  align-items:inherit;
+  font-size: 32px;
+  margin-top: 15%;
+
+}
+
+
+.CoworkTextSyle1{
+  color: #8D4AF7;
+  text-align: left;
+  display: flex;
+  align-items:inherit;
+  font-size: 25px;
+  
+}
+
+.CoworkTextSyle2{
+  color: black;
+  text-align: left;
+  display: flex;
+  align-items:inherit;
+  font-size: 25px;
+  
+}
+
+.coworkingHead{
+  text-align: center;
+}
+
+
+.cardStyle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Центрируем карточки по горизонтали */
+  width: 100%; /* Установите ширину на 100%, чтобы растянуть на весь контейнер */
+}
+
+.zone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Центрируем элементы внутри зоны */
+  width: 100%; /* Убедитесь, что zone занимает всю ширину cardStyle */
+}
+
+.card {
+  width: calc(50% - 20px); /* 50% ширины зоны минус отступ */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+.card-body {
+  text-align: center; /* Центрируем содержимое */
+}
+
+.card-img {
+  max-width: 100%; /* Чтобы изображение не выходило за пределы карточки */
+  width: 250px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 15%;
+}
+ 
+/* Стили для больших экранов (например, десктопы) */
+@media (min-width: 992px) {
+  .card {
+    width: calc(33.33% - 20px); /* Три карточки в ряд */
+  }
+
+  .card-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Стили для планшетов */
+@media (min-width: 768px) and (max-width: 991px) {
+  .card {
+    width: calc(50% - 20px); /* Две карточки в ряд */
+  }
+
+  .card-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Стили для мобильных телефонов */
+@media (max-width: 767px) {
+  .card {
+    width: 100%; /* Одна карточка на всю ширину */
+  }
+
+  .CoworkTextSyle, .CoworkTextSyle1, .CoworkTextSyle2 {
+    font-size: 18px; /* Уменьшение размера шрифта для мобильных устройств */
+    margin-top: 10%; /* Уменьшение верхнего отступа */
+  }
+
+  .card-img {
+    width: 100%;
+    height: auto;
+  }
+}
