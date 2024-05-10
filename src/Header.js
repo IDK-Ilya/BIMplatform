@@ -1,10 +1,11 @@
-import React from 'react';
+import React , {useState, useEffect}from 'react';
 import { Navbar, Nav, NavDropdown, Button, Container, Row, Col } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext'; // Подключаем AuthContext
+import axios from 'axios';
 
 const Header = () => {
-  const { user, logout, isAuthenticated } = useAuth(); // Используем isAuthenticated для проверки статуса аутентификации
+  const { user, logout, isAuthenticated, setUser } = useAuth(); // Используйте setUser, если он предоставлен вашим контекстом
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -12,13 +13,26 @@ const Header = () => {
     navigate('/login'); // Перенаправляем на страницу входа после выхода
   };
 
-  const fetchName = () => {
-    axios.get('https://cors-anywhere.herokuapp.com/https://c0c4-62-33-49-119.ngrok-free.app/protected-route')
-      .then(response => {
+  useEffect(() => {
+    const fetchName = async () => {
+      try {
+        const response = await axios.get('https://cors-anywhere.herokuapp.com/https://93e2-62-33-49-119.ngrok-free.app/unprotected-route', {
+        
+          
+        });
         console.log('Response data:', response.data);
-      });
-      
-  }
+        setUser(response.data); // Обновление состояния пользователя в контексте
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+
+    if (isAuthenticated) {
+      fetchName();
+    }
+  }, [isAuthenticated, setUser]); 
+
+
 
 
   return (
@@ -53,7 +67,7 @@ const Header = () => {
           <Col xs={4} className='custom-buttons'>
             {isAuthenticated ? (
               <div className="d-flex justify-content-end">
-                <span className="text-white align-self-center mr-3">{user ? user.fullName : 'Загрузка...'}</span>
+                <span className="text-white align-self-center mr-3">{user ? user.data : 'Загрузка...'}</span>
                 <Button variant="outline-light" onClick={handleLogout}>Выход</Button>
               </div>
             ) : (

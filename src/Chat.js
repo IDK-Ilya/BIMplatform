@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-<script src="https://cdn.deadsimplechat.com/sdk/1.2.1/dschatsdk.min.js"></script>
 
 
 export default class Chat extends Component {
@@ -7,7 +6,8 @@ export default class Chat extends Component {
   render() {
     return (
         <div className="Chat">
-            
+            <iframe src="https://deadsimplechat.com/V2IuBarNA?username=bob" width="100%" height="600px"></iframe>
+
            
         </div>
       );

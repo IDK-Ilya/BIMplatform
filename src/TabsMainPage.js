@@ -31,6 +31,8 @@ import BussinesPatners from './BussinesPatners';
 
 import Chat from './Chat'
 
+import AddWork from "./AddNewWork"
+
 const sliderSettings = {
   dots: true,
   infinite: true,
@@ -474,7 +476,7 @@ const TabsComponent = () => {
           <BussinesPatners/>
         </Tab>
         <Tab eventKey="projects" title="Проектная деятельность">
-        {/* Содержимое для Проектная деятельность */}
+          <AddWork/>
         </Tab>
         <Tab eventKey="science" title="Научная деятельность">
         <Chat />

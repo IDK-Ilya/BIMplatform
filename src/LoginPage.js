@@ -27,7 +27,7 @@ function LoginPage() {
   const handleLogin = async () => {
     const params = new URLSearchParams(formData).toString();
     try {
-      await axios.post(`https://cors-anywhere.herokuapp.com/https://c0c4-62-33-49-119.ngrok-free.app/api/auth/login?${params}`);
+      await axios.post(`https://cors-anywhere.herokuapp.com/https://93e2-62-33-49-119.ngrok-free.app/api/auth/login?${params}`);
       login(); // Установка флага аутентификации в true
       navigate('/'); // Перенаправление на главную страницу
     } catch (error) {

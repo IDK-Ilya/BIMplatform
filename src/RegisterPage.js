@@ -26,7 +26,7 @@ function RegisterPage() {
   };
   
   const fetchUserData = () => {
-    axios.post('https://cors-anywhere.herokuapp.com/https://c0c4-62-33-49-119.ngrok-free.app/api/auth/register', formData, {
+    axios.post('https://cors-anywhere.herokuapp.com/https://93e2-62-33-49-119.ngrok-free.app/api/auth/register', formData, {
       headers: {
         'Content-Type': 'application/json'
       }

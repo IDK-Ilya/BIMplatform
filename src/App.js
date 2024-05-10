@@ -1,10 +1,11 @@
-import React from 'react';
+import React  , {useState, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import MainContent from './MainContent';
 import { AuthProvider } from './AuthContext';
 import Footer from './Footer';
 import 'bootstrap/dist/css/bootstrap.css';
+import axios from 'axios';
 
 import LoginPage from './LoginPage';
 import RegisterPage from './RegisterPage';
@@ -14,6 +15,9 @@ import './Header.css';
 import './Footer.css';
 
 function App() {
+
+
+
   return (
     <AuthProvider>
        <Router>
