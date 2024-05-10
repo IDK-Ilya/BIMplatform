@@ -32,7 +32,7 @@ const RegistrationModal = ({ show, onHide, eventId }) => {
     try {
         // Отправляем данные формы на сервер
         const params = new URLSearchParams(formData).toString();
-        axios.post(`https://cors-anywhere.herokuapp.com/https://93e2-62-33-49-119.ngrok-free.app/add_pers_on_event?${params}`, {
+        axios.post(`http://127.0.0.1:8000/add_pers_on_event?${params}`, {
     // здесь может быть тело запроса, если это необходимо
         });
         console.log('Server Response:',params);

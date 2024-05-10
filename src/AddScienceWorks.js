@@ -20,7 +20,7 @@ const AddWorkForm = ({ onAdd }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const newWork = { title, description };
-    const response = await axios.post('http://127.0.0.1:8000/add_works', newWork);
+    const response = await axios.post('http://127.0.0.1:8000/add_scienceWorks', newWork);
     onAdd(response.data);
     setTitle('');
     setDescription('');
@@ -60,7 +60,7 @@ const WorksDisplay = () => {
     const fetchWorks = async () => {
       try {
         console.log("Fetching works...");
-        const response = await axios.get('http://127.0.0.1:8000/get_works');
+        const response = await axios.get('http://127.0.0.1:8000/get_scienceWorks');
         //console.log("Works fetched:", response.data);
         if (Array.isArray(response.data)) {
           setWorks(response.data);
@@ -94,7 +94,7 @@ const WorksDisplay = () => {
   };
 
   const handleDeleteWork = async (id) => {
-    await axios.delete(`http://127.0.0.1:8000/works/${id}`);
+    await axios.delete(`http://127.0.0.1:8000/scienceWorks/${id}`);
     setWorks(works.filter(work => work.id !== id));
   };
 

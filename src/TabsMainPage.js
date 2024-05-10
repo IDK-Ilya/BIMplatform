@@ -29,9 +29,12 @@ import Events from './Events';
 
 import BussinesPatners from './BussinesPatners';
 
-import Chat from './Chat'
+import Chat from './Chat';
 
-import AddWork from "./AddNewWork"
+import AddWork from './AddNewWork';
+
+import AddScienceWork from './AddScienceWorks'
+
 
 const sliderSettings = {
   dots: true,
@@ -479,12 +482,12 @@ const TabsComponent = () => {
           <AddWork/>
         </Tab>
         <Tab eventKey="science" title="Научная деятельность">
-        <Chat />
+        <AddScienceWork />
         </Tab>
         
         {isAuthenticated && (
-        <Tab eventKey="special" title="Специальная вкладка">
-          {/* Содержимое для специальной вкладки, доступной только после входа */}
+        <Tab eventKey="special" title="Чат">
+         <Chat/>
         </Tab>
       )}
     </Tabs>
