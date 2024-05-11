@@ -26,23 +26,23 @@ const Header = () => {
             <Col xs={6} >
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav"  className='navStyle'>
-                    <Nav>
-                    <NavDropdown title="Студентам" id="basic-nav-dropdown-students"  className='custom-nav1'>
+                    <div className='Addd customnav1'><Nav>
+                    <NavDropdown title="Студентам" id="basic-nav-dropdown-students"  className='customnav1'>
                       <NavDropdown.Item href="#action/3.1">Расписание</NavDropdown.Item>
                       <NavDropdown.Item href="#action/3.2">Успеваемость</NavDropdown.Item>
                       <NavDropdown.Item href="#action/3.3">Финансовые вопросы</NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="#action/3.4">Другие услуги</NavDropdown.Item>
                     </NavDropdown>
-                    <NavDropdown title="Преподавателям" id="basic-nav-dropdown-teachers" className='custom-nav1'>
+                    <NavDropdown title="Преподавателям" id="basic-nav-dropdown-teachers" className='customnav1'>
                       <NavDropdown.Item href="#action/3.1">Курсы</NavDropdown.Item>
                       <NavDropdown.Item href="#action/3.2">Методические материалы</NavDropdown.Item>
                       <NavDropdown.Item href="#action/3.3">Научная работа</NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="#action/3.4">Администрирование</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link href="#campus" className='custom-nav1'>О кампусе</Nav.Link>
-                    </Nav>
+                    <Nav.Link href="#campus" className='customnav1'>О кампусе</Nav.Link>
+                    </Nav></div>
                 </Navbar.Collapse>
             </Col>
             <Col xs={3} className='toogleA'>

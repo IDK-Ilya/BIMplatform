@@ -10,7 +10,7 @@ const WorkItem = ({ work, onDelete }) => (
     <Card.Body>
       <Card.Title>{work.title}</Card.Title>
       <Card.Text>{work.description}</Card.Text>
-      {work.filePath && <a href={`http://127.0.0.1:8000/files/${work.filePath}`} target="_blank" rel="noopener noreferrer">View File</a>}
+      {<a href={`http://127.0.0.1:8000/download_all`} target="_blank" rel="noopener noreferrer">Просмотреть работу</a>}
       
     </Card.Body>
   </Card>
@@ -28,21 +28,30 @@ const AddWorkForm = ({ onAdd, onClose }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
-    formData.append('title', title);
-    formData.append('description', description);
-    formData.append('file', file);
-
-    const response = await axios.post('http://127.0.0.1:8000/add_works', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      }
-    });
-    onAdd(response.data);
-    setTitle('');
-    setDescription('');
-    setFile(null);
-    onClose();
+    formData.append('file', file);  // Добавляем только файл, так как другие данные идут в URL
+    
+    // Создаем URL с параметрами
+    const url = `http://127.0.0.1:8000/upload?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+  
+    try {
+      const response = await axios.post(url, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+      console.log(formData);
+      onAdd(response.data); // Добавляем работу в список на фронтенде
+      setTitle('');
+      setDescription('');
+      setFile(null);
+      onClose(); // Закрываем модальное окно
+    } catch (error) {
+      console.error('Ошибка при отправке формы:', error);
+      console.log(formData);
+    }
   };
+  
+  
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -50,21 +59,24 @@ const AddWorkForm = ({ onAdd, onClose }) => {
         <Form.Label>Название работы</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Введите название"
+          placeholder="Введите название не более 35 символов"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          maxLength={30}
         />
       </Form.Group>
       <Form.Group>
-        <Form.Label>Описание работы</Form.Label>
-        <Form.Control
-          as="textarea"
-          rows={3}
-          placeholder="Введите описание"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-      </Form.Group>
+    <Form.Label>Описание работы</Form.Label>
+    <Form.Control
+      as="textarea"
+      rows={3}
+      placeholder="Введите описание не более 80 символов"
+      value={description}
+      onChange={(e) => setDescription(e.target.value)}
+      maxLength={100}  // Добавление ограничения на максимальное количество символов
+    />
+</Form.Group>
+
       <Form.Group>
         <Form.Label>Прикрепить файл</Form.Label>
         <Form.Control type="file" onChange={handleFileChange} />
@@ -82,7 +94,7 @@ const WorksDisplay = () => {
   useEffect(() => {
     const fetchWorks = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/get_works');
+        const response = await axios.get('http://127.0.0.1:8000/download_all');
         if (Array.isArray(response.data)) {
           setWorks(response.data);
         } else {
@@ -99,10 +111,7 @@ const WorksDisplay = () => {
     setWorks([...works, work]);
   };
 
-  const handleDeleteWork = async (id) => {
-    await axios.delete(`http://127.0.0.1:8000/works/${id}`);
-    setWorks(works.filter(work => work.id !== id));
-  };
+
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);

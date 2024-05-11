@@ -6,7 +6,7 @@
     font-size: 25px;
 }
 
-.list-unstyled{
+.list-unstyled1{
     font-family: 'Inter', sans-serif;
     font-size: 20px;
 }
@@ -19,3 +19,14 @@
     background-color: #44004A;
     color:white;
 }
+.footer-col1 ul {
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+  }
+
+  .footer-col1 ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
