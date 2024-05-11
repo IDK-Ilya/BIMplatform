@@ -10,8 +10,10 @@ const WorkItem = ({ work, onDelete }) => (
     <Card.Body>
       <Card.Title>{work.title}</Card.Title>
       <Card.Text>{work.description}</Card.Text>
-      {<a href={`http://127.0.0.1:8000/download_all`} target="_blank" rel="noopener noreferrer">Просмотреть работу</a>}
-      
+      {/* Используем ID каждой работы для формирования уникальной ссылки на скачивание */}
+      <a href={`http://127.0.0.1:8000/download/${work.id}`} target="_blank" rel="noopener noreferrer">
+        Просмотреть работу
+      </a>
     </Card.Body>
   </Card>
 );
@@ -52,7 +54,6 @@ const AddWorkForm = ({ onAdd, onClose }) => {
   };
   
   
-
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group>
@@ -62,27 +63,26 @@ const AddWorkForm = ({ onAdd, onClose }) => {
           placeholder="Введите название не более 35 символов"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          maxLength={30}
+          maxLength={35}
         />
       </Form.Group>
       <Form.Group>
-    <Form.Label>Описание работы</Form.Label>
-    <Form.Control
-      as="textarea"
-      rows={3}
-      placeholder="Введите описание не более 80 символов"
-      value={description}
-      onChange={(e) => setDescription(e.target.value)}
-      maxLength={100}  // Добавление ограничения на максимальное количество символов
-    />
-</Form.Group>
-
+        <Form.Label>Описание работы</Form.Label>
+        <Form.Control
+          as="textarea"
+          rows={3}
+          placeholder="Введите описание не более 80 символов"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          maxLength={80}
+        />
+      </Form.Group>
       <Form.Group>
         <Form.Label>Прикрепить файл</Form.Label>
         <Form.Control type="file" onChange={handleFileChange} />
       </Form.Group>
-      <div><Button  type="submit" > Добавить работу</Button>
-   </div> </Form>
+      <Button type="submit">Добавить работу</Button>
+    </Form>
   );
 };
 
@@ -108,10 +108,8 @@ const WorksDisplay = () => {
   }, []);
 
   const handleAddWork = (work) => {
-    setWorks([...works, work]);
+    setWorks([work, ...works]);  // Добавляем новую работу в начало списка
   };
-
-
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -120,7 +118,7 @@ const WorksDisplay = () => {
     <Container className='contAddWork'>
       <h1>Добавленные работы</h1>
       {isAuthenticated && (
-        <Button variant="primary" onClick={handleShowModal} style={{backgroundColor:'#87A7C4', borderColor:'#87A7C4', marginTop:'-325px', marginLeft:'575px', fontSize: '18px'}}>Добавить работу</Button>
+        <Button variant="primary" onClick={handleShowModal} style={{backgroundColor:'#87A7C4', borderColor:'#87A7C4', marginTop:'20px', marginBottom:'20px'}}>Добавить работу</Button>
       )}
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
@@ -131,9 +129,10 @@ const WorksDisplay = () => {
         </Modal.Body>
       </Modal>
       <Row>
-        {Array.isArray(works) && works.map((work) => (
-          <Col key={work.id}>
+        {works.map((work) => (
+          <Col key={work.id} xs={12} md={4}>
             <WorkItem work={work} />
+            
           </Col>
         ))}
       </Row>
