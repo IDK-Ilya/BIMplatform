@@ -131,7 +131,7 @@ const projectBanner = <div ><Container fluid className="project-banner" >
       </Col>
   </Row> 
   
-</Container><div className="btn-container"><Button  className='btnSetting btnColor'>Добавить работу</Button></div></div>
+</Container></div>
 
 
 
@@ -233,9 +233,9 @@ const TabsComponent = () => {
                 {/* Добавьте столько текста, сколько нужно */}
             </p>
             <div className="d-flex flex-column align-items-center">
-                <Button variant="light" className="my-2 w-75">Преимущество 1 и большой текст </Button>
-                <Button variant="light" className="my-2 w-75">Преимущество 2</Button>
-                <Button variant="light" className="my-2 w-75">Преимущество 3</Button>
+                <p variant="light" style={{ fontSize:'17px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}} className="my-2 w-75">Преимущество 1 и большой текст </p>
+                <p variant="light"  style={{ fontSize:'17px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}}className="my-2 w-75">Преимущество 2</p>
+                <p variant="light"style={{ fontSize:'17px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}}className="my-2 w-75">Преимущество 3</p>
             </div>
             </Col>
             <Col md={6}>

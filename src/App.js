@@ -1,39 +1,54 @@
-import React  , {useState, useEffect} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './Header';
-import MainContent from './MainContent';
 import { AuthProvider } from './AuthContext';
-import Footer from './Footer';
+import { AccessibilityProvider, useAccessibility } from './AccessibilityContext';
 import 'bootstrap/dist/css/bootstrap.css';
-import axios from 'axios';
+
+// Import all components, standard and accessible
+import Header from './Header';
+import HeaderAccessible from './HeaderAccessible';
+import Footer from './Footer';
+import FooterAccessible from './FooterAccessible';
+import MainContent from './MainContent';
+import MainContentAccessible from './MainContentAccessible';
 
 import LoginPage from './LoginPage';
 import RegisterPage from './RegisterPage';
 
-
+// Styles
 import './Header.css';
 import './Footer.css';
 
 function App() {
-
-
-
   return (
     <AuthProvider>
-       <Router>
-      <Header />
+      <Router>
+        <AccessibilityProvider>
+          <DynamicComponents />
+        </AccessibilityProvider>
+      </Router>
+    </AuthProvider>
+  );
+}
+
+// Component to handle the dynamic rendering based on accessibility state
+function DynamicComponents() {
+  const { isAccessible } = useAccessibility();
+  
+  const DynamicHeader = isAccessible ? HeaderAccessible : Header;
+  const DynamicFooter = isAccessible ? FooterAccessible : Footer;
+  const DynamicMainContent = isAccessible ? MainContentAccessible : MainContent;
+
+  return (
+    <>
+      <DynamicHeader />
       <Routes>
-      
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path = "/" element = {  <MainContent />}/>
-        
+        <Route path="/" element={<DynamicMainContent />} />
       </Routes>
-    
-      <Footer />
-    </Router>
-    </AuthProvider>
-   
+      <DynamicFooter />
+    </>
   );
 }
 

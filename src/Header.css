@@ -1,0 +1,73 @@
+.custom-container {
+  max-width: 100%; /* Ширина контейнера может быть задана по желанию */
+}
+
+.custom-brand {
+  display: flex;
+  align-items: center; /* Вертикальное центрирование бренда */
+}
+
+.custom-nav .navbar-nav {
+  margin-top:5px;
+  justify-content: center;
+   /* Горизонтальное центрирование навигационных ссылок */
+   display: flex;
+}
+
+.custom-buttons {
+  display: flex;
+  align-items: center; /* Вертикальное центрирование кнопок */
+  justify-content: end; /* Выравнивание кнопок по правому краю */
+}
+
+/* Стилизация для адаптивного меню (тогглера) */
+.custom-nav .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1); /* Менее заметная граница тогглера */
+}
+
+
+/* Добавление отступов или других стилей для кнопок, если необходимо */
+.btn-outline-light, .btn-primary {
+  margin: 0 5px; /* Отступы между кнопками */
+}
+
+.navbar {
+  background-color: #333; /* Темно-серый цвет фона */
+}
+
+.navbar-brand {
+  color: #fff; /* Белый цвет текста для бренда */
+}
+
+.nav-link {
+  color: #aaa; /* Светло-серый цвет для ссылок навигации */
+  margin-left: -5px;
+}
+
+.custom-capmus{
+  color: #aaa;
+  display: flex;
+}
+
+.nav-link:hover {
+  color: #aaa; /* Белый цвет текста для ссылок навигации при наведении */
+}
+
+.btn-outline-light {
+  border-color: #555; /* Более темный цвет границы для кнопки 'Вход' */
+}
+
+/* Кастомный стиль для кнопки 'Регистрация' */
+.btn-primary {
+  background-color: #6200ea; /* Ярко-фиолетовый цвет фона */
+  border-color: #6200ea; /* Ярко-фиолетовый цвет границы */
+}
+
+.btn-primary:hover {
+  background-color: #3700b3; /* Темно-фиолетовый цвет фона при наведении */
+}
+
+.toogleT{
+  color: white;
+  margin-top: 5px;
+}

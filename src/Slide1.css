@@ -1,0 +1,136 @@
+
+.carouselcontainer1 {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease-in-out;
+  background-color: #EADF00;
+  border-radius: 10px;
+}
+
+.carouselcontainer1 .card {
+  
+  background: -webkit-linear-gradient(to right, #1D58C0, #151718); /* Градиент для Webkit-браузеров */
+  background: linear-gradient(to right, #1D58C0, #151718); /* Стандартный градиент слева направо */
+  border: none;
+}
+
+.carouselcontainer1 .card {
+  
+  background: -webkit-linear-gradient(to right, #1D58C0, #151718); /* Градиент для Webkit-браузеров */
+  background: linear-gradient(to right, #1D58C0, #151718); /* Стандартный градиент слева направо */
+  border: none;
+}
+
+
+.slick-slide {
+  padding: 10px;
+}
+.slideHead{
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 90px;
+  color:#44004A;
+  
+}
+
+.carousel-container1 .btnSlider{
+  background-color: white;
+  color: black;
+  align-items: left;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.carousel-container1 .eventCardImg{
+  width: 100px;
+  border-radius: 50%;
+  padding-top: 5px;
+}
+
+.carousel-container1 .eventHeadContainer {
+
+  display: flex;
+  align-items: center; /* Центрирует содержимое по вертикали */
+  justify-content: left; /* Выравнивает содержимое по левому краю */
+  height: 100px; /* Примерная высота контейнера, настраивайте по вашему усмотрению */
+  padding-left: 5px; /* Отступ слева для отступа текста от края */
+  
+}
+
+
+.carousel-container1 .eventHead{
+  font-size: 20px;
+  text-align: left;
+  color: white;
+  margin-left: -30%;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+}
+
+.carousel-container1 .eventBody {
+  text-align: left; /* Выравнивание текста по левому краю */
+  padding-left: 10px; /* Добавление небольшого отступа слева, если нужно */
+}
+
+.carousel-container1.eventBody h2, .eventBody h4 {
+  margin: 0; /* Удаление стандартных отступов у заголовков для более тесного расположения */
+}
+
+.carousel-container1.carousel-container1.colorTime111{
+  color:#44004A;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.carousel-container1 {
+  color: #44004A;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.colorSlideText111{
+  color: #44004A;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.colorSlideText111{
+  color: #44004A;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    align-items:center ; /* Aligns it at the top */
+    margin-left: -8%;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    align-items: center; 
+    margin-right: -8%;/* Aligns it at the bottom */
+}
+
+.slide .btnColor1{
+    width: 70%; /* Растягиваем кнопку по ширине */
+    background-color: #44004A; /* Фон кнопки черный */
+    color: white; /* Текст кнопки белый */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 300px;
+ 
+}
+
+.colorSlideText1111{
+  color: #44004A;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+}

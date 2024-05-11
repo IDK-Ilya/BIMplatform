@@ -1,0 +1,9 @@
+.customStyle {
+    height: 200px;
+    border-color: none;
+   box-shadow: none;
+}
+
+.customStyle .card-text{
+    color: black;
+}

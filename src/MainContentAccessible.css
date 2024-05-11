@@ -1,0 +1,208 @@
+.banner {
+    background-color: #F1F1F1; /* Подберите точный цвет фона */
+    padding: 0 ; /* Отступы сверху и снизу баннера */
+   
+   
+  }
+  
+.mainPageBlock1{
+    border-color: #44004A;
+    border-radius: 10px;
+    border: 1px solid #44004A40;
+    box-shadow: 0 4px 8px #44004A40;
+    font-family: 'Inter', sans-serif;
+}
+  
+  .mainPageBlock1 .banner-title1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #44004A !important;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  
+  
+  .mainPageBlock1 .banner-subtitle1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #44004A;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .textstyleT11{
+    color: #EADF00;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.textstyle1{
+color: #EADF00;
+text-align:justify ;
+font-size: 30px;
+font-family: 'Inter', sans-serif;
+}
+
+.banner-description {
+font-size: 1rem; /* Размер шрифта для описания */
+color: #000000; /* Цвет текста */
+position: relative; /* Для позиционирования псевдоэлемента */
+border-radius: 25px; /* Скругление углов подложки */
+padding: 5px 10px 5px 0px; /* Отступы внутри подложки */
+margin-top: 10px; /* Отступ сверху для подложки */
+text-align: center;
+display: flex; /* Включаем Flexbox */
+flex-direction: column; /* Стекаем элементы вертикально */
+align-items: center; /* Центрирование по горизонтали */
+justify-content: center; /* Центрирование по вертикали */
+padding-right: 20px;
+}
+
+.platform-box1{
+
+color: #44004A;
+border-radius: 20px; /* Скругление углов */
+display: inline-block; /* Блок под текст */
+padding: 10px 20px; /* Внутренние отступы */
+margin-top: 20px; /* Отступ сверху */
+position: relative; /* Для позиционирования псевдоэлемента */
+padding-right: 20px; /* Место для точки справа */
+font-family: 'Inter', sans-serif;
+}
+
+.platform-box::after {
+    content: ''; /* Псевдоэлемент должен иметь свойство content */
+    position: absolute;
+    top: 50%; /* Выровняем по вертикали */
+    transform: translateY(-50%); /* Центрирование по вертикали */
+    width: 8px; /* Размер точки */
+    height: 8px; /* Размер точки */
+    background: #000; /* Цвет точки */
+    border-radius: 50%; /* Сделаем её круглой */
+    margin-left: 5px;
+    font-family: 'Inter', sans-serif;
+  }
+
+
+.btnStyly1234{
+  background-color: #EADF00;
+  color: black;
+  border-color: #EADF00;
+  font-size: 23px;
+}
+
+.html .btnStyly1234 :hover{
+  background-color: #EADF00 !important;
+  color: black;
+}
+
+
+
+  .backColorFAQ1 .accordStyleB1 .accordion-button.collapsed {
+    font-size: 60px; /* Увеличенный размер шрифта для неактивных заголовков */
+  }
+  
+  .html.accordStyleB1 .accordion-item {
+    border: none !important;  /* Убрать стандартные границы */
+    border-radius: 10px !important;  /* Закругленные края для всех элементов аккордеона */
+    overflow: hidden;  /* Предотвращает выход содержимого за рамки закругленных краев */
+  }
+  
+  /* Стили для активного заголовка аккордеона */
+  html .accordStyleB1 .accordion-button:not(.collapsed) {
+    background-color: #D1C3FB60; /* Полупрозрачный фиолетовый цвет для заголовка при раскрытии */
+    color: white;  /* Черный цвет текста */
+    font-size: 24px;  /* Размер шрифта заголовка */
+  }
+  
+  /* Стили для контейнера активного элемента аккордеона */
+  html .accordStyleB1 .accordion-item:not(.collapsed) {
+    background-color: #D1C3FB60 !important; /* Полупрозрачный фиолетовый цвет фона для всего элемента */
+    color: black;  /* Черный цвет текста */
+    font-size: 45px;  /* Размер шрифта тела */
+  }
+  
+  /* Стили для тела активного аккордеона */
+  html .accordion-collapse.show1 {
+    background-color: #D1C3FB60; /* Полупрозрачный фиолетовый цвет фона для тела аккордеона */
+    color: black;  /* Черный цвет текста */
+  }
+  
+  /* Стили для границы активного элемента аккордеона */
+  html .accordion-button1 {
+    border-color: #D1C3FB60; /* Фиолетовая граница, совпадающая с цветом фона */
+  }
+
+  .colCard{
+    background-color: #28002C;
+    border-radius: 10px;
+    align-self: center;
+    box-shadow: 0 4px 8px #28002C80;
+    border-color:#28002C ;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    margin-left: 100;
+  }
+
+.cardHead1{
+  color: #fff;
+  font-size: 40px;
+  font-family: 'Inter', sans-serif;
+}
+
+.registration-block-container1{
+  margin-left: 150px;
+}
+
+.slider-container1{
+  background-color: #28002C;
+  height: 400px;
+  
+}
+.slider-container1 .text123{
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Inter', sans-serif;
+}
+.slider-container1 .text1234{
+  color: white;
+  font-family: 'Inter', sans-serif;
+  background-color: #44004A ;
+  
+}
+
+.partner-card1 {
+
+  height: 275px;
+  width: 300px;
+  display: flex; /* Используем flex для более гибкого выравнивания */
+  justify-content: center; /* Горизонтальное выравнивание */
+  align-items: center; /* Вертикальное выравнивание */
+  text-align: center; /* Центрирование текста внутри блоков */
+  margin-left: 50px;
+  background-color: #44004A;
+  margin-top: 10px;
+}
+
+.partner-card1 .cardBody {
+  display: flex;
+  flex-direction: column; /* Ориентация элементов в колонку */
+  justify-content: center; /* Центрирование содержимого по вертикали */
+  align-items: center; /* Центрирование содержимого по горизонтали */
+}
+
+.logoText{
+  color: #EADF00;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.mainText{
+  color: white !important;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+}

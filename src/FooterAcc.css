@@ -1,0 +1,21 @@
+
+.names{
+    font-family: 'Inter', sans-serif;
+    color: #EADF00;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.list-unstyled{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+.footer1{
+    background-color: #44004A;
+}
+
+.footer-text-row1{
+    background-color: #44004A;
+    color:white;
+}

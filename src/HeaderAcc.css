@@ -1,0 +1,63 @@
+.addddd .custom-container{
+  background-color: #44004A;
+  font-family: 'Inter', sans-serif;
+}
+.custom-navbar {
+    background-color: #44004A; /* Deep purple background */
+    color: white;
+  }
+  .custom-container.navbar-brand{
+    color: white;
+  }
+  
+  .brand-logo {
+    color: white; /* Ensure the brand logo is white */
+  }
+  
+  .nav-link {
+    color: white;
+  }
+  
+  .accessibility-switch {
+    color: white; /* Style for the accessibility toggle */
+  }
+  
+  .addddd .custom-brand{
+    color: white;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: -20px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+  
+  }
+
+  .addddd .toogleA{
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+  }
+
+ .addddd .custom-nav1{
+    color: white !important;
+    font-size: 25px;
+    margin-top: 9px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+  }
+  .addddd .navStyle :hover{
+  color: white !important;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+  }
+
+ .addddd .newBtnStyle{
+  background-color:#EADF00 ;
+  color: black;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  }
+
