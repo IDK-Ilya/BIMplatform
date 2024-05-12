@@ -10,7 +10,11 @@ function RegisterPage() {
     username: '',
     email: '',
     telephone: '',
-    password: ''
+    password: '',
+    is_active: true,
+    is_superuser: false,
+    is_verified: false,
+    role_id: 1,
   });
   const [error, setError] = useState('');
   const navigate = useNavigate();

@@ -63,6 +63,7 @@
 .text-style{
   color: #fff;
   text-align:center;
+  font-size: 25px;
 }
 
 .text-style1{
@@ -98,6 +99,7 @@
   background-color: black; /* Установка черного фона для всего контейнера */
   color: white; /* Белый цвет текста для контента на черном фоне */
   padding: 30px 0; /* Вертикальные отступы для контейнера */
+  height: 700px;
 }
 
 .registration-block-container .textstyle,
@@ -151,6 +153,7 @@
   padding: 20px;
   background-color: #2C2C54; /* Темно-синий фон, как на изображении */
   color: white; /* Белый текст */
+  align-items: center;
 }
 
 .slider-container h2,
@@ -525,43 +528,37 @@ html .accordion-button {
   margin-top: 15%;
 }
  
-/* Стили для больших экранов (например, десктопы) */
-@media (min-width: 992px) {
-  .card {
-    width: calc(33.33% - 20px); /* Три карточки в ряд */
-  }
-
-  .card-img {
-    width: 100%;
-    height: auto;
-  }
+.imgMain {
+  display: flex;            /* Используем flexbox для выравнивания содержимого */
+  justify-content: center;  /* Центрирование содержимого по горизонтали */
+  align-items: center;      /* Центрирование содержимого по вертикали */
+  height: 350px;            /* Задаем высоту блока */
 }
 
-/* Стили для планшетов */
-@media (min-width: 768px) and (max-width: 991px) {
-  .card {
-    width: calc(50% - 20px); /* Две карточки в ряд */
-  }
-
-  .card-img {
-    width: 100%;
-    height: auto;
-  }
+.imgMain img {
+  height: 350px;            /* Задаем высоту картинки */
+  width: auto;              /* Ширина картинки автоматическая */
 }
 
-/* Стили для мобильных телефонов */
-@media (max-width: 767px) {
-  .card {
-    width: 100%; /* Одна карточка на всю ширину */
-  }
-
-  .CoworkTextSyle, .CoworkTextSyle1, .CoworkTextSyle2 {
-    font-size: 18px; /* Уменьшение размера шрифта для мобильных устройств */
-    margin-top: 10%; /* Уменьшение верхнего отступа */
-  }
-
-  .card-img {
-    width: 100%;
-    height: auto;
-  }
+.imgMainBack{
+   
+    background-size: cover; /* Обеспечивает покрытие всей доступной площади элемента без потери пропорций */
+    background-position: center; /* Центрирует изображение в элементе */
+    background-repeat: no-repeat; /* Предотвращает повторение изображения */
+   
 }
+
+.imgMainBack .imgMainBack1{
+  height: 450px;
+}
+
+.alignContent{
+  margin-top: -12%;
+}
+
+.imgMainBack12{
+  height: 450px;
+  margin-left: 35%;
+  
+}
+

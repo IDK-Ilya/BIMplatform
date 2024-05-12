@@ -83,6 +83,7 @@
 
 .colorSlideText2{
   color: white;
+  font-size: 18px;
 }
 
 .carousel-control-prev,
@@ -105,4 +106,8 @@
     border-radius: 5px;
     margin-bottom: 10px;
  
+}
+
+.sizeBox{
+  height: 320px;
 }

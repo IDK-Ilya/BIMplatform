@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Accordion, Tabs, Tab,Container, Row, Col, Button, Card, CardText   } from 'react-bootstrap';
+import {Accordion, Tabs, Tab,Container, Row, Col, Button, Card, CardText  } from 'react-bootstrap';
 
 import { useAuth } from './AuthContext';
 
@@ -9,8 +9,10 @@ import Slider from 'react-slick';
 import Carousel from 'react-bootstrap/Carousel';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import img6 from './6.png'
-import companyLogo from './company-logo.jpg';
+import img6 from './6.png';
+
+
+
 import Modal1 from './modal1';
 import Modal2 from './modal2';
 import Modal3 from './modal3';
@@ -25,6 +27,7 @@ import imgProj1 from './imgProj1.png';
 
 import imgScien from './imgScien.png';
 
+import imgMain from './главная.jpg';
 import Events from './Events';
 
 import BussinesPatners from './BussinesPatners';
@@ -34,7 +37,12 @@ import Chat from './Chat';
 import AddWork from './AddNewWork';
 
 import AddScienceWork from './AddScienceWorks'
+import students from './students.png'
+import student from './student.png'
 
+import companyLogo1 from './лого 4.jpg';
+import companyLogo2 from './лого 5.jpg';
+import companyLogo3 from './лого 6.jpg';
 
 const sliderSettings = {
   dots: true,
@@ -221,27 +229,24 @@ const TabsComponent = () => {
         <pre></pre>
         <h2 className= 'text-style1 '>Что такое БИМ?</h2>
         <pre></pre>
-        <pre></pre>
-        <pre></pre>
         <Row className="align-items-center">
             
             <Col md={6} className="text-center p-5" >
             
             <p className= 'text-style'>
-                Какой-то умный текст, что БИМ это круто, классно,
-                Какой-то умный текст, что БИМ это круто, классно,
+            	«Большая Ивановская мануфактура» – научно-образовательный кампус. Новая площадка в Иванове для междисциплинарных исследований и открытий. Место, сочетающее в себе науку и досуг.
                 {/* Добавьте столько текста, сколько нужно */}
             </p>
             <div className="d-flex flex-column align-items-center">
-                <p variant="light" style={{ fontSize:'17px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}} className="my-2 w-75">Преимущество 1 и большой текст </p>
-                <p variant="light"  style={{ fontSize:'17px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}}className="my-2 w-75">Преимущество 2</p>
-                <p variant="light"style={{ fontSize:'17px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}}className="my-2 w-75">Преимущество 3</p>
+                <p variant="light" style={{ fontSize:'17px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}} className="my-2 w-75">Площадки для проведения мероприятий</p>
+                <p variant="light"  style={{ fontSize:'17px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}}className="my-2 w-75">Современные лаборатории и коворкинги</p>
+                <p variant="light"style={{ fontSize:'17px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}}className="my-2 w-75">Технопарк</p>
+                <p variant="light"style={{ fontSize:'17px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}}className="my-2 w-75">Общежития для студентов и преподавателей</p>
+                <p variant="light"style={{ fontSize:'17px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}}className="my-2 w-75">Библиотека, музей</p>
             </div>
             </Col>
             <Col md={6}>
-            <React.Fragment>
-             
-            </React.Fragment>
+             <div className = 'imgMain'><img src={imgMain} /></div> 
             </Col>
         </Row>
         </Container>
@@ -249,93 +254,63 @@ const TabsComponent = () => {
         <Slide />
         </div>
         <div className="registration-block-container align-items-center">
-        <Row>
-        <h2 className='textstyle ' >Хочешь рассказать о своих достижениях?</h2>
-        <h3 className='textstyle1'>Заполни портфолио!</h3>
-        <pre></pre>
-        <pre></pre>
-        <pre></pre> 
-            <Row>
-              <Col md={12}>
-                
-              </Col>
-            </Row>
-            <Row>
-              <Col md={6}>
-              <Card  border="light"   style={{ width: '40rem',backgroundColor: 'black' }}>
-             
-              <Card.Body>
-                <Card.Title style ={{color:'white'}}>Научная деятельность</Card.Title>
-                <pre></pre>
-                <pre></pre>
-
-                <Card.Text>
-                Молодой ученый, ждем твоих 
-                достижений! Переходи по ссылке 
-                и делись своими научными работами
-                </Card.Text>
-                <pre></pre>
-                <pre></pre>
-                <Button variant="primary">Заполнить портфолио</Button>
-              </Card.Body>
-            </Card>
-              </Col>
-              <Col md={6}>
-              <Card border="light"  style={{ width: '40rem', backgroundColor: 'black' }}>
-              
-              <Card.Body>
-                <Card.Title  style ={{color:'white'}}>Общественная деятельность</Card.Title>
-                <pre></pre>
-                <pre></pre>
-                <Card.Text>
-                Любишь общение и новые знакомства? Готов стать тем самым супер героем? Расскажи об этом!
-                </Card.Text>
-                <pre></pre>
-                <pre></pre>
-                <Button variant="primary">Заполнить портфолио</Button>
-              </Card.Body>
-            </Card>
-              </Col>
-            </Row>
           
-        </Row>
+          <Row>
+          <h2 className='textstyle ' >Хочешь рассказать о своих достижениях?</h2>
+          <h3 className='textstyle1'>Заполни портфолио!</h3>
+          <div className='imgMainBack'><img src={students}  className='imgMainBack1'/> <img className='imgMainBack12' src={student}/></div> 
+          <pre></pre>
+          <pre></pre>
+          <pre></pre> 
+       
+           <div className='alignContent'>   <Row>
+                <Col md={12}>
+                  
+                </Col>
+              </Row>
+              <Row>
+                <Col md={6}>
+                <Card  border="light"   style={{ width: '40rem',backgroundColor: 'black' }}>
+              
+                <Card.Body>
+                  <Card.Title style ={{color:'white'}}>Научная деятельность</Card.Title>
+                  <pre></pre>
+                  <pre></pre>
+
+                  <Card.Text>
+                  Молодой ученый, ждем твоих 
+                  достижений! Переходи по ссылке 
+                  и делись своими научными работами
+                  </Card.Text>
+                  <pre></pre>
+                  <pre></pre>
+                  <Button variant="primary">Заполнить портфолио</Button>
+                </Card.Body>
+              </Card>
+                </Col>
+                <Col md={6}>
+                <Card border="light"  style={{ width: '40rem', backgroundColor: 'black' }}>
+                
+                <Card.Body>
+                  <Card.Title  style ={{color:'white'}}>Общественная деятельность</Card.Title>
+                  <pre></pre>
+                  <pre></pre>
+                  <Card.Text>
+                  Любишь общение и новые знакомства? Готов стать тем самым супер героем? Расскажи об этом!
+                  </Card.Text>
+                  <pre></pre>
+                  <pre></pre>
+                  <Button variant="primary">Заполнить портфолио</Button>
+                </Card.Body>
+              </Card>
+                </Col>
+              </Row>
+            </div>
+            
+          </Row>
       </div>
 
-      <div className="slider-container  align-items-center">
-      <h2>Наши бизнес-партнеры</h2>
-      <p>Они помогают сделать это место круче, а также предоставляют возможность развивать себя</p>
-      <Slider {...sliderSettings}>
-        <Card className="partner-card">
-          <Card.Img variant="top" src={companyLogo} />
-          <Card.Body>
-            <Card.Title>Лого компании</Card.Title>
-            <Card.Text style ={{color:'black'}}>Много текста про компанию, либо про человека, мб его цитата.</Card.Text>
-          </Card.Body>
-        </Card>
-        <Card className="partner-card">
-          <Card.Img variant="top" src={companyLogo} />
-          <Card.Body>
-            <Card.Title>Лого компании</Card.Title>
-            <Card.Text style ={{color:'black'}}>Много текста про компанию, либо про человека, мб его цитата.</Card.Text>
-          </Card.Body>
-        </Card>
-        <Card className="partner-card">
-          <Card.Img variant="top" src={companyLogo} />
-          <Card.Body>
-            <Card.Title>Лого компании</Card.Title>
-            <Card.Text style ={{color:'black'}}> Много текста про компанию, либо про человека, мб его цитата.</Card.Text>
-          </Card.Body>
-        </Card>
-        <Card className="partner-card">
-          <Card.Img variant="top" src={companyLogo} />
-          <Card.Body>
-            <Card.Title>Лого компании</Card.Title>
-            <Card.Text style ={{color:'black'}}>Много текста про компанию, либо про человека, мб его цитата.</Card.Text>
-          </Card.Body>
-        </Card>
-        
-      </Slider>
-      </div>
+     
         <div className='backColorFAQ'>
         <div className='styleFAQ'>
           <pre> </pre>
