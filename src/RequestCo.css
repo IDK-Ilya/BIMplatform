@@ -1,0 +1,17 @@
+.contBody {
+    color: black; /* Цвет текста для всех карточек */
+    margin-left: 10px;
+  }
+  
+
+
+  
+  
+  .btn-gray {
+    background-color: #6c757d; /* Bootstrap secondary color */
+    border-color: #6c757d;
+  }
+  
+ .card-text{
+    color: black !important;
+  }

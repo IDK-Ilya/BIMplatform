@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button, Row, Col,Carousel, Container } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import './Slide.css';
@@ -13,6 +14,8 @@ import eventLogo3 from './лого 3.jpg'
 
 function EventSlider() {
   
+ 
+
   return (
 
   <div className='slide'> 
@@ -44,7 +47,7 @@ function EventSlider() {
               </Col>
               
             </Row>
-            <Button variant="outline-light" className="me-2 mt-4 btnColor">Регистрация</Button>  
+       
           </Col>
           <Col xs={6}>
             <Col>
@@ -79,7 +82,7 @@ function EventSlider() {
               </Col>
              
             </Row>
-            <Button variant="outline-light" className="me-2 mt-4 btnColor">Регистрация</Button>  
+           
           </Col>
           <Col xs={6}>
             <Col>
@@ -123,7 +126,7 @@ function EventSlider() {
               </Col>
              
             </Row>
-            <Button variant="outline-light" className="me-2 mt-4 btnColor">Регистрация</Button>  
+        
           </Col>
           <Col xs={6}>
             <Col>

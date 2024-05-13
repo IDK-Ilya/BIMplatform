@@ -87,7 +87,7 @@ const TabsComponent = () => {
             <div className="d-flex flex-column align-items-center">
               <Row>
               <Col>
-              <p variant="light" className="" style={{fontFamily: 'Inter', fontSize:'20px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}}>Преимущество 1 и большой текст </p>
+              <p variant="light" className="" style={{fontFamily: 'Inter', fontSize:'20px',fontColor:'white', borderRadius:'5px', width:'17em',padding:'5px'}}>Преимущество 1 и большой текст </p>
               </Col>
               <Col>
               <p variant="light" className=""  style={{fontFamily: 'Inter',fontSize:'20px', backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}}>Преимущество 2 fddddddddddddddddddddddddddddd</p>

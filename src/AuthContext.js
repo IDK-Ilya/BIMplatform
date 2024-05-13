@@ -1,22 +1,39 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [email, setEmail] = useState(() => {
+    // Пытаемся получить email пользователя из localStorage при инициализации
+    const savedEmail = localStorage.getItem('userEmail');
+    console.log('Loading email from localStorage:', savedEmail);
+    return savedEmail;
+  });
+
+  useEffect(() => {
+    // Следим за изменениями в email и обновляем localStorage
+    console.log('Email state has changed:', email);
+    if (email) {
+      localStorage.setItem('userEmail', email);
+    } else {
+      localStorage.removeItem('userEmail');
+    }
+  }, [email]);
 
   const login = (userData) => {
-    setUser(userData);
+    console.log('Logging in user:', userData);
+    setEmail(userData.email);  // предполагаем, что userData содержит поле email
   };
 
   const logout = () => {
-    setUser(null);
+    console.log('Logging out user');
+    setEmail(null);  // Это также вызовет удаление 'userEmail' из localStorage из-за useEffect
   };
 
-  const isAuthenticated = user !== null;
+  const isAuthenticated = email !== null;
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ email, isAuthenticated, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

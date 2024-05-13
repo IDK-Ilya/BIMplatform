@@ -3,7 +3,14 @@ import {Accordion, Tabs, Tab,Container, Row, Col, Button, Card, CardText  } from
 
 import { useAuth } from './AuthContext';
 
-import img from "./img1.jpg";
+import img1 from "./коворкинг 1.jpeg";
+import img2 from "./зал 1.jpg";
+import img3 from "./мини зал.jpg";
+import img4 from "./лек 1.jpg";
+
+
+import img6T from "./6T.png";
+
 import Slide from './Slide';
 import Slider from 'react-slick';
 import Carousel from 'react-bootstrap/Carousel';
@@ -11,6 +18,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img6 from './6.png';
 
+import imgEvents1 from './imgEvents1.png'
+import imgEvents2 from './imgEvents2.png'
 
 
 import Modal1 from './modal1';
@@ -21,7 +30,7 @@ import './TabsMainPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import imgBuis1 from './imgBuis1.png';
-import imgBuis2 from './imgBuis2.png';
+import imgBuis2 from './пацан.png';
 
 import imgProj1 from './imgProj1.png';
 
@@ -72,17 +81,18 @@ const mainPageBanner = (
 // Вставьте здесь подходящие JSX или компоненты для других вкладок
 const coworkingBanner = <div ><Container fluid className="coworking-banner" >
   <Row className="justify-content-center align-items-center">
-    <Col xs={12} md={8} >
+    <Col xs={12} >
     <h2 className='textCowork'>Коворкинг для студентов</h2>
     <h5 className='bantext'>Открой для себя</h5> 
     <h5 className='bantext'> командную работу с новой</h5> 
     <h5 className='bantext'> стороны</h5>
     
+     
+    <Col xs={3} >
     </Col>
-    <Col xs={12} md={4} >
+    <img className="emoji1" src={img6T}  alt="123"/>
           
-          
-        </Col>
+    </Col>
     </Row> 
     
 </Container><div className="btn-container"><Button  className='btnSetting'>Записаться</Button></div></div>;
@@ -96,8 +106,8 @@ const eventsBanner = <div><Container fluid className='event-banner'>
   
   </Col>
   <Col xs={12} md={4} >
-        <img src={imgBuis1} alt="" className="emoji" />
-        <img src={imgBuis2} alt="" className="emoji" />
+        <img src={imgEvents1} alt="" className="emoji2" />
+        <img src={imgEvents2} alt="" className="emoji" />
         
       </Col>
       <pre></pre>
@@ -116,7 +126,7 @@ const businessBanner = <div ><Container fluid className="business-banner" >
   </Col>
   <Col xs={12} md={4} >
         <img src={imgBuis1} alt="" className="emoji" />
-        <img src={imgBuis2} alt="" className="emoji" />
+        <img src={imgBuis2} alt="" className="emoji3" />
         
       </Col>
       <pre></pre>
@@ -161,7 +171,7 @@ const scienceBanner = <div ><Container fluid className="science-banner" >
       <pre></pre>
   </Row> 
   
-</Container><div className="btn-container"><Button  className='btnSetting btnColorS'>Добавить работу</Button></div></div>
+</Container><div className="btn-container"></div></div>
 
 
 const TabsComponent = () => {
@@ -169,6 +179,7 @@ const TabsComponent = () => {
   const [activeTab, setActiveTab] = useState('main');
   const { isAuthenticated } = useAuth(); // Проверка, аутентифицирован ли пользователь
 
+ 
   
  
   const [showModal1, setShowModal1] = useState(false);
@@ -278,7 +289,7 @@ const TabsComponent = () => {
                   <pre></pre>
                   <pre></pre>
 
-                  <div className='alignContentText'> <Card.Text>
+                  <div className='alignContentText' style ={{color:'white', textAlign:'center'}} > <Card.Text>
                   Молодой ученый, ждем твоих 
                   достижений! Переходи по ссылке 
                   и делись своими научными работами
@@ -293,10 +304,10 @@ const TabsComponent = () => {
                 <Card border="light"  style={{ width: '40rem', backgroundColor: 'black' }}>
                 
                 <Card.Body>
-                  <Card.Title  style ={{color:'white'}}>Общественная деятельность</Card.Title>
+                  <Card.Title  style ={{color:'white', textAlign:'center'}}>Общественная деятельность</Card.Title>
                   <pre></pre>
                   <pre></pre>
-                  <div className='alignContentText'> <Card.Text>
+                  <div className='alignContentText' style ={{color:'white', textAlign:'center'}}> <Card.Text>
                   Любишь общение и новые знакомства? Готов стать тем самым супер героем? Расскажи об этом!
                   </Card.Text></div>
                   <pre></pre>
@@ -314,7 +325,7 @@ const TabsComponent = () => {
       <div className="slider-container">
       <h2>Наши бизнес-партнеры</h2>
       <p>Они помогают сделать это место круче, а также предоставляют возможность развивать себя</p>
-      <div><Row>
+      <div className='mainCards'><Row>
         <Col xs={4}>
         <Card className="partner-card">
           <Card.Img variant="top" src={companyLogo1}  className='cardImgPart'/>
@@ -402,18 +413,18 @@ const TabsComponent = () => {
             <h1 className="coworkingHead">Залы в кампусе БИМ</h1>
             <pre> </pre>
             <div className='zone' style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <Card style={{ width: 'calc(50% - 20px)', marginBottom: '20px' }}>
+              <Card style={{ marginBottom: '20px' }}>
                 <Card.Body>
                  
                   <Card.Text>
                     <Row>
                       <Col s={12}>
-                        <h1 className="CoworkTextSyle">Малый зал</h1>
-                        <h2 className="CoworkTextSyle1">Корпус Б</h2>
-                        <h2 className="CoworkTextSyle2">аудитория <span className="CoworkTextSyle1" style={{float:'right', marginLeft:'5px'} }> 319а</span></h2>
+                        <h1 className="CoworkTextSyle">Коворкинг </h1>
+                        <h2 className="CoworkTextSyle1">проспект Ленина, 21с1</h2>
+                       
                       </Col>
                       <Col s={12}>
-                        <Card.Img src={img} className="card-img" />
+                        <Card.Img src={img1} className="card-img" />
                       </Col>
                     </Row>
                   </Card.Text>
@@ -421,17 +432,16 @@ const TabsComponent = () => {
                   <Modal1 show={showModal1} onHide={handleCloseModal1} />
                 </Card.Body>
               </Card>
-              <Card style={{ width: 'calc(50% - 20px)', marginBottom: '20px' }}>
+              <Card style={{ marginBottom: '20px' }}>
                 <Card.Body>
                   <Card.Text>
                   <Row>
                       <Col s={12}>
-                        <h1 className="CoworkTextSyle">Большой зал</h1>
-                        <h2 className="CoworkTextSyle1">Корпус Б</h2>
-                        <h2 className="CoworkTextSyle2">аудитория <span className="CoworkTextSyle1" style={{float:'right', marginLeft:'5px'} }> 316</span></h2>
+                        <h1 className="CoworkTextSyle">Конференц-зал </h1>
+                        <h2 className="CoworkTextSyle1">ул. Бубнова, 40А</h2>
                       </Col>
                       <Col s={12}>
-                        <Card.Img src={img} className="card-img" />
+                        <Card.Img src={img2} className="card-img" />
                       </Col>
                     </Row>
                   </Card.Text>
@@ -439,17 +449,16 @@ const TabsComponent = () => {
                   <Modal2 show={showModal2} onHide={handleCloseModal2} />
                 </Card.Body>
               </Card>
-              <Card style={{ width: 'calc(50% - 20px)', marginBottom: '20px' }}>
+              <Card style={{  marginBottom: '20px' }}>
                 <Card.Body>
                   <Card.Text>
                   <Row>
                       <Col s={12}>
-                        <h1 className="CoworkTextSyle">Зал ПК</h1>
-                        <h2 className="CoworkTextSyle1">Корпус А</h2>
-                        <h2 className="CoworkTextSyle2">аудитория <span className="CoworkTextSyle1" style={{float:'right', marginLeft:'5px'} }> 222</span></h2>
+                        <h1 className="CoworkTextSyle">Малый зал</h1>
+                        <h2 className="CoworkTextSyle1">Ул. Жарова, 10</h2>
                       </Col>
                       <Col s={12}>
-                        <Card.Img src={img} className="card-img" />
+                        <Card.Img src={img3} className="card-img" />
                       </Col>
                     </Row>
                   </Card.Text>
@@ -457,17 +466,16 @@ const TabsComponent = () => {
                   <Modal3 show={showModal3} onHide={handleCloseModal3} />
                 </Card.Body>
               </Card>
-              <Card style={{ width: 'calc(50% - 20px)', marginBottom: '20px' }}>
+              <Card style={{  marginBottom: '20px' }}>
                 <Card.Body>
                   <Card.Text>
                   <Row>
                       <Col s={12}>
-                        <h1 className="CoworkTextSyle">Большой зал</h1>
-                        <h2 className="CoworkTextSyle1">Корпус С</h2>
-                        <h2 className="CoworkTextSyle2">аудитория <span className="CoworkTextSyle1" style={{float:'right', marginLeft:'5px'} }> 456</span></h2>
+                        <h1 className="CoworkTextSyle">Лекторий</h1>
+                        <h2 className="CoworkTextSyle1">Ул. Батурина, 15</h2>
                       </Col>
                       <Col s={12}>
-                        <Card.Img src={img} className="card-img" />
+                        <Card.Img src={img4} className="card-img" />
                       </Col>
                     </Row>
                   </Card.Text>

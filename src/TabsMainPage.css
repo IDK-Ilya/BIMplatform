@@ -124,9 +124,7 @@
   height: 200px;
 }
 
-.card-text{
-  color: white;
-}
+
 
 
 .slider-container {
@@ -287,12 +285,6 @@ html .btn-container .btnSetting {
   padding-left: 100px;
 }
 
-.zone{
-  display: flex;
-  justify-content: center;  
-  align-items: center;      
-  min-height: 5vh;     
-}
 
 .business-banner {
   background: #fff; /* белый фон */
@@ -305,7 +297,7 @@ html .btn-container .btnSetting {
 }
 
 .business-banner .emoji {
-  width: 200px; /* ширина для эмодзи */
+  width: 220px; /* ширина для эмодзи */
   height: auto; /* автоматическая высота для сохранения пропорций */
   margin: 0 5px; /* отступы вокруг эмодзи */
 }
@@ -483,6 +475,12 @@ html .accordion-button {
   width: 100%; /* Убедитесь, что zone занимает всю ширину cardStyle */
 }
 
+.zone .card{
+  height: 20%;
+  width: 30%;
+  margin-left: 100px;
+}
+
 
 
 .card-img {
@@ -562,9 +560,11 @@ html .accordion-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #336;
+  color: white;
 }
 
-.slider-container .partner-card .cardImgPart{
+.slider-container .mainCards .partner-card .cardImgPart{
   
   height: 60%;
   width: 70%;
@@ -577,4 +577,74 @@ html .accordion-button {
   
  text-align: center;
 
+}
+
+.emoji1{
+  height: 250px;
+  margin-left: 75%;
+  margin-top: -10%;
+}
+
+.emoji2{
+  width: 175px; /* ширина для эмодзи */
+  height: auto; /* автоматическая высота для сохранения пропорций */
+  margin: 5px; /* отступы вокруг эмодзи */
+  margin-top: 10%;
+}
+
+.emoji3{
+  width: 175px; /* ширина для эмодзи */
+  height: auto; /* автоматическая высота для сохранения пропорций */
+  margin: 5px; /* отступы вокруг эмодзи */
+  margin-top: 10%;
+}
+
+/* Базовые стили применяются для всех устройств, затем кастомизируем для мобильных */
+
+/* Медиазапрос для устройств с шириной экрана меньше 768px (планшеты и смартфоны) */
+@media (max-width: 768px) {
+  .imgMainBack, .imgMainBack1, .imgMainBack12 {
+    height: auto; /* Авто-высота для более гибкой адаптации */
+    background-size: contain; /* Изображение полностью видимо в контейнере */
+  }
+
+  .slider-container .partner-card,
+  .registration-block-container .row > [class^='col-'],
+  .event-card, .project-banner, .business-banner, .science-banner {
+    width: 100%; /* Карточки занимают всю ширину контейнера */
+    margin: 10px 0; /* Вертикальные отступы */
+    flex-direction: column; /* Стек элементов вертикально */
+    align-items: center; /* Центрирование содержимого */
+    box-shadow: none; /* Убираем тени на маленьких экранах */
+  }
+
+  .card-img {
+    width: 100%; /* Изображения на всю ширину карточки */
+    height: auto; /* Авто-высота для сохранения пропорций */
+  }
+
+  .btn-container, .btnAlign {
+    flex-direction: column; /* Кнопки стекаются вертикально */
+  }
+
+  .coworking-banner, .event-banner, .business-banner, .science-banner {
+    height: auto; /* Высота автоматически подстраивается под контент */
+    padding: 10px; /* Меньше паддинга */
+  }
+
+  .emoji1, .emoji2, .emoji3 {
+    width: 100px; /* Меньший размер эмодзи */
+    margin-top: 5px; /* Меньше отступов */
+  }
+
+  .CoworkTextSyle, .CoworkTextSyle1, .CoworkTextSyle2, .bussinesText, .bantext {
+    font-size: 18px; /* Меньший размер шрифта для текста */
+    padding-left: 10px; /* Меньшие отступы слева */
+    margin-top: 10px; /* Отступ сверху для заголовков и текста */
+  }
+
+  .cardStyle, .zone {
+    flex-wrap: nowrap; /* Не позволяем элементам переноситься */
+    flex-direction: column; /* Элементы стекаются вертикально */
+  }
 }

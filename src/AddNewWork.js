@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Card, Button, Form, Container, Row, Col, Modal } from 'react-bootstrap';
+import { Card, Button, Form, Container, Row, Col, Modal, Tab, Tabs } from 'react-bootstrap';
 import { useAuth } from './AuthContext';
 
 import './CustimStyleWorks.css';
+import RequestCoAuthorWorks from './RequestCoAuthorWorks'
 
 const WorkItem = ({ work, onDelete }) => (
   <Card className="m-2 customStyle" style={{ width: '18rem' }}>
@@ -11,7 +12,7 @@ const WorkItem = ({ work, onDelete }) => (
       <Card.Title>{work.title}</Card.Title>
       <Card.Text>{work.description}</Card.Text>
       {/* Используем ID каждой работы для формирования уникальной ссылки на скачивание */}
-      <a href={`http://127.0.0.1:8000/download/${work.id}`} target="_blank" rel="noopener noreferrer">
+      <a href={`http://127.0.0.1:8000/opearation/download/${work.id}`} target="_blank" rel="noopener noreferrer">
         Просмотреть работу
       </a>
     </Card.Body>
@@ -33,7 +34,7 @@ const AddWorkForm = ({ onAdd, onClose }) => {
     formData.append('file', file);  // Добавляем только файл, так как другие данные идут в URL
     
     // Создаем URL с параметрами
-    const url = `http://127.0.0.1:8000/upload?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+    const url = `http://127.0.0.1:8000/operations/upload?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
   
     try {
       const response = await axios.post(url, formData, {
@@ -94,7 +95,7 @@ const WorksDisplay = () => {
   useEffect(() => {
     const fetchWorks = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/download_all');
+        const response = await axios.get('http://127.0.0.1:8000/operations/download_all');
         if (Array.isArray(response.data)) {
           setWorks(response.data);
         } else {
@@ -114,15 +115,24 @@ const WorksDisplay = () => {
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
+  const [activeTab, setActiveTab] = useState('main');
+  
   return (
+    <Tabs
+      id="controlled-tab-example"
+      activeKey={activeTab}
+      onSelect={(k) => setActiveTab(k)}
+      className="mb-3 nav nav-tabs justify-content-center text-decoration-none "
+    >
+      <Tab eventKey="main" title="Работы" >
     <Container className='contAddWork'>
-      <h1>Добавленные работы</h1>
+      <div className='alignText'><h1>Добавленные работы</h1></div>
       {isAuthenticated && (
         <Button variant="primary" onClick={handleShowModal} style={{backgroundColor:'#87A7C4', borderColor:'#87A7C4', marginTop:'20px', marginBottom:'20px'}}>Добавить работу</Button>
       )}
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Добавление работы</Modal.Title>
+          <Modal.Title > Добавление работы</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <AddWorkForm onAdd={handleAddWork} onClose={handleCloseModal} />
@@ -137,6 +147,11 @@ const WorksDisplay = () => {
         ))}
       </Row>
     </Container>
+    </Tab>
+    <Tab eventKey="search" title="Поиск соавторов" >
+      <RequestCoAuthorWorks/>
+      </Tab>
+    </Tabs>
   );
 };
 

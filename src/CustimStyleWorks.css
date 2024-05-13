@@ -7,3 +7,7 @@
 .customStyle .card-text{
     color: black;
 }
+
+.alignText{
+    text-align: center !important;
+}
