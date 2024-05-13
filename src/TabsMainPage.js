@@ -263,7 +263,8 @@ const TabsComponent = () => {
           <pre></pre>
           <pre></pre> 
        
-           <div className='alignContent'>   <Row>
+           <div className='alignContent'>  
+            <Row>
                 <Col md={12}>
                   
                 </Col>
@@ -273,18 +274,18 @@ const TabsComponent = () => {
                 <Card  border="light"   style={{ width: '40rem',backgroundColor: 'black' }}>
               
                 <Card.Body>
-                  <Card.Title style ={{color:'white'}}>Научная деятельность</Card.Title>
+                  <div className='alignContentText'><Card.Title style ={{color:'white'}} >Научная деятельность</Card.Title></div>
                   <pre></pre>
                   <pre></pre>
 
-                  <Card.Text>
+                  <div className='alignContentText'> <Card.Text>
                   Молодой ученый, ждем твоих 
                   достижений! Переходи по ссылке 
                   и делись своими научными работами
-                  </Card.Text>
+                  </Card.Text></div>
                   <pre></pre>
                   <pre></pre>
-                  <Button variant="primary">Заполнить портфолио</Button>
+                  <div className='btnAlign'><Button variant="primary">Заполнить портфолио</Button></div>
                 </Card.Body>
               </Card>
                 </Col>
@@ -295,12 +296,12 @@ const TabsComponent = () => {
                   <Card.Title  style ={{color:'white'}}>Общественная деятельность</Card.Title>
                   <pre></pre>
                   <pre></pre>
-                  <Card.Text>
+                  <div className='alignContentText'> <Card.Text>
                   Любишь общение и новые знакомства? Готов стать тем самым супер героем? Расскажи об этом!
-                  </Card.Text>
+                  </Card.Text></div>
                   <pre></pre>
                   <pre></pre>
-                  <Button variant="primary">Заполнить портфолио</Button>
+                  <div className='btnAlign'><Button variant="primary">Заполнить портфолио</Button></div>
                 </Card.Body>
               </Card>
                 </Col>
@@ -310,7 +311,39 @@ const TabsComponent = () => {
           </Row>
       </div>
 
-     
+      <div className="slider-container">
+      <h2>Наши бизнес-партнеры</h2>
+      <p>Они помогают сделать это место круче, а также предоставляют возможность развивать себя</p>
+      <div><Row>
+        <Col xs={4}>
+        <Card className="partner-card">
+          <Card.Img variant="top" src={companyLogo1}  className='cardImgPart'/>
+          <Card.Body>
+            <Card.Title>Tele 2</Card.Title>
+            <Card.Text style ={{color:'white'}}>Российская телекоммуникационная компания, базируется на собственной инфраструктуре, работает с 2003 года</Card.Text>
+          </Card.Body>
+        </Card>
+        </Col>
+        <Col xs={4}>
+        <Card className="partner-card">
+          <Card.Img variant="top" src={companyLogo2}  className='cardImgPart'/>
+          <Card.Body>
+            <Card.Title>АО «Информатика»</Card.Title>
+            <Card.Text style ={{color:'white'}}>Компания, занимающаяся разработкой программного обеспечения уже более 67 лет. Мы являемся экспертами в сфере автоматизированных систем управления предприятием.</Card.Text>
+          </Card.Body>
+        </Card>
+        </Col>
+        <Col xs={4}>
+        <Card className="partner-card">
+          <Card.Img variant="top" src={companyLogo3}  className='cardImgPart'/>
+          <Card.Body>
+            <Card.Title>Нейрософт</Card.Title>
+            <Card.Text style ={{color:'white'}}>Производитель медицинского диагностического оборудования для нейрофизиологии, функциональной диагностики, аудиологии и реабилитации.</Card.Text>
+          </Card.Body>
+        </Card>
+        </Col>
+        </Row></div>
+      </div>
         <div className='backColorFAQ'>
         <div className='styleFAQ'>
           <pre> </pre>

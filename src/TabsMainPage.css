@@ -108,21 +108,6 @@
   color: white; /* Белый цвет текста */
 }
 
-.activity-card {
-  background-color: black; /* Черный фон для карточек */
-  color: white; /* Белый текст внутри карточек */
-  border: none; /* Убираем границу карточек */
-  margin-bottom: 15px; /* Отступы снизу карточек */
-}
-
-.activity-card .card-img-top {
-  background-color: white; /* Черный фон для изображения в карточке */
-  border-radius: 0; /* Убрать скругление углов изображения */
-}
-
-.activity-card .card-body {
-  padding: 1.25rem; /* Внутренние отступы для содержимого карточек */
-}
 
 
 
@@ -143,11 +128,6 @@
   color: white;
 }
 
-.card{
-  border-color: white;
-  max-width: 60%;
-  text-align: center;
-}
 
 .slider-container {
   padding: 20px;
@@ -168,10 +148,7 @@
   margin: 0 auto; /* Центрирование карточек в слайде */
 }
 
-.partner-card .card-img-top {
-  width: 100%; /* Изображение растягивается на всю ширину */
-  object-fit: cover; /* Обрезка изображений под размер контейнера */
-}
+
 
 .slick-dots li button:before {
   color: white; /* Цвет точек индикаторов слайдера */
@@ -207,10 +184,11 @@ body {
 }
 
 /* Стиль для карточек */
-.card {
+.alignContent .card {
   max-width: 30rem; /* Максимальная ширина карточки */
   margin: 1rem; /* Отступы вокруг карточки */
   /* Остальные стили оставляем без изменений */
+  margin-bottom: 50x;
 }
 
 /* Стиль для изображений внутри карточек */
@@ -395,12 +373,7 @@ html .btn-container .btnColorS{
   border-bottom: 1px solid #ccc;
 }
 
-.card {
-  border: none;
-  border-radius: 10px; /* скругление углов */
-  border: 1px solid #A387C4;
-  box-shadow: 0 4px 8px #A387C4; 
-}
+
 
 
 .backColorFAQ{
@@ -510,14 +483,7 @@ html .accordion-button {
   width: 100%; /* Убедитесь, что zone занимает всю ширину cardStyle */
 }
 
-.card {
-  width: calc(50% - 20px); /* 50% ширины зоны минус отступ */
-  margin-bottom: 20px; /* Отступ снизу */
-}
 
-.card-body {
-  text-align: center; /* Центрируем содержимое */
-}
 
 .card-img {
   max-width: 100%; /* Чтобы изображение не выходило за пределы карточки */
@@ -550,15 +516,65 @@ html .accordion-button {
 
 .imgMainBack .imgMainBack1{
   height: 450px;
+  background-size: cover; /* Обеспечивает покрытие всей доступной площади элемента без потери пропорций */
+  background-position: center; /* Центрирует изображение в элементе */
+  background-repeat: no-repeat; /* Предотвращает повторение изображения */
 }
 
-.alignContent{
-  margin-top: -12%;
+.registration-block-container  .alignContent{
+  margin-top: -15%;
 }
 
-.imgMainBack12{
+.imgMainBack .imgMainBack12{
   height: 450px;
-  margin-left: 35%;
+  margin-left: 69%;
+  margin-top: -550px;
+  background-size: cover; /* Обеспечивает покрытие всей доступной площади элемента без потери пропорций */
+  background-position: center; /* Центрирует изображение в элементе */
+  background-repeat: no-repeat; /* Предотвращает повторение изображения */
   
 }
 
+.alignContentText .card-title{
+  text-align: center;
+}
+
+
+.alignContentText .card-text{
+  text-align: center;
+}
+
+.btnAlign{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-block-container .btn-primary{
+  background-color: white;
+  color: black;
+  border: none;
+
+}
+
+.slider-container .partner-card {
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-container .partner-card .cardImgPart{
+  
+  height: 60%;
+  width: 70%;
+  padding: 5px;
+  
+
+}
+
+.slider-container .partner-card .card-title{
+  
+ text-align: center;
+
+}
