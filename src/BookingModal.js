@@ -39,7 +39,7 @@ const BookingModal = ({ show, onHide }) => {
     setError(''); // Очистка предыдущих ошибок
  
     try {
-      const response = await axios.post('http://127.0.0.1:8000/check_room_availability', JSON.stringify(bookingData), {
+      const response = await axios.post('https://appmvp.onrender.com/check_room_availability', JSON.stringify(bookingData), {
   headers: {
     'Content-Type': 'application/json'
   }
