@@ -14,7 +14,7 @@ import MainContentAccessible from './MainContentAccessible';
 
 import LoginPage from './LoginPage';
 import RegisterPage from './RegisterPage';
-import AuthProvider from './AuthContext'; // Importing AuthProvider correctly
+import {AuthProvider} from './AuthContext'; // Importing AuthProvider correctly
 // Styles
 import './Header.css';
 import './Footer.css';
