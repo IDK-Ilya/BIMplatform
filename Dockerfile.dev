@@ -1,6 +1,8 @@
-FROM node:14.14.0-alpine
+FROM node:21.4.0-alpine
 WORKDIR /app
 COPY ./package.json ./
-RUN npm i
+RUN npm install
 COPY . .
+ENV NODE_ENV development
+EXPOSE 3000
 CMD [ "npm", "run","start" ]

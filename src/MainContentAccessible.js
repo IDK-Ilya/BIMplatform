@@ -130,7 +130,7 @@ const TabsComponent = () => {
                 </Card.Text>
                 <pre></pre>
                 <pre></pre>
-                <Button variant="primary" className='btnStyly1234'>Заполнить портфолио</Button>
+                <Button variant="primary" className='btnStyly1234'style={{backgroundColor:'white'}}>Заполнить портфолио</Button>
               </Card.Body>
             </Card>
               </Col>
@@ -146,7 +146,7 @@ const TabsComponent = () => {
                 </Card.Text>
                 <pre></pre>
                 <pre></pre>
-                <Button variant="primary" className='btnStyly1234'>Заполнить портфолио</Button>
+                <Button variant="primary" className='btnStyly1234' style={{backgroundColor:'white'}}>Заполнить портфолио</Button>
               </Card.Body>
             </Card>
               </Col>
