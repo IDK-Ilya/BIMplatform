@@ -50,7 +50,7 @@
 
 
 .carousel-container1 .eventHead{
-  font-size: 21px;
+  font-size: 31px;
   text-align: left;
   color: white;
   margin-left: -30%;
@@ -109,5 +109,5 @@
 }
 
 .sizeBox{
-  height: 12em;
+  height: 10em;
 }

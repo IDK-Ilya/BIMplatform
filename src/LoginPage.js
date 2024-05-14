@@ -4,10 +4,16 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 import { Form, Button, Card, Container, Row, Col } from 'react-bootstrap';
 
+import './LoginPage.css';
+
 function LoginPage() {
   const [formData, setFormData] = useState({
+    grant_type:'',
     username: '',
-    password: ''
+    password: '',
+    scope:'',
+    client_id:'',
+    client_secret:'',
   });
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -25,7 +31,7 @@ function LoginPage() {
     event.preventDefault();
     const params = new URLSearchParams(formData).toString();
     try {
-      await axios.post(`http://127.0.0.1:8000/api/auth/login?${params}`);
+      await axios.post(`https://appmvp.onrender.com/api/auth/login`,params);
       login();
       navigate('/');
     } catch (error) {
@@ -35,9 +41,10 @@ function LoginPage() {
   };
 
   return (
-    <Container className="centered-container"> {/* Используйте класс centered-container для центрирования */}
-      <Row>
-        <Col xs={12} md={6}>
+    <div className='centeredcontainer'> 
+    <Container className="mt-5">
+      <Row className="justify-content-md-center">
+        <Col xs={12} md={8}>  {/* Увеличенная ширина колонки для формы */}
           <Card>
             <Card.Body>
               <Card.Title>Вход</Card.Title>
@@ -62,6 +69,7 @@ function LoginPage() {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 }
 

@@ -79,24 +79,24 @@ const TabsComponent = () => {
             <Col  className="text-center p-5" >
             
               <p className= 'textstyle1'>
-                  Какой-то умный текст, что БИМ это круто, классно,
-                  Какой-то умный текст, что БИМ это круто, классно,
-                  {/* Добавьте столько текста, сколько нужно */}
+              «Большая Ивановская мануфактура» – научно-образовательный кампус. Новая площадка в Иванове для междисциплинарных исследований и открытий. Место, сочетающее в себе науку и досуг.
               </p>
             </Col>
             <div className="d-flex flex-column align-items-center">
               <Row>
-              <Col>
-              <p variant="light" className="" style={{fontFamily: 'Inter', fontSize:'20px',fontColor:'white', borderRadius:'5px', width:'17em',padding:'5px'}}>Преимущество 1 и большой текст </p>
-              </Col>
-              <Col>
-              <p variant="light" className=""  style={{fontFamily: 'Inter',fontSize:'20px', backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}}>Преимущество 2 fddddddddddddddddddddddddddddd</p>
-              </Col >
-              <Col >
+              
+              <p className="zx123" style={{fontFamily: 'Inter', fontSize:'35px', color:'white',width:'10em',padding:'5px'}}>Площадки для проведения мероприятий </p>
+             
+              <p  className=""  style={{fontFamily: 'Inter',fontSize:'35px', color:'white',  width:'10em',padding:'5px'}}>Современные лаборатории и коворкинги</p>
+             
                
-              <p variant="light" className=""  style={{fontFamily: 'Inter', fontSize:'20px',backgroundColor:'white', borderRadius:'10px', width:'17em',padding:'5px'}}>Преимущество 2 fddddddddddddddddddddddddddddd</p>
+              <p  className=""  style={{fontFamily: 'Inter', fontSize:'35px',color:'white', width:'10em',padding:'5px'}}>Технопарк</p>
+              <p  className=""  style={{fontFamily: 'Inter', fontSize:'35px',color:'white', width:'10em',padding:'5px'}}>Общежития для студентов и преподавателей</p>
            
-              </Col>
+               
+              <p  className=""  style={{fontFamily: 'Inter', fontSize:'35px',color:'white',  width:'10em',padding:'5px'}}>Библиотека, музей</p>
+           
+             
               </Row>
                 
               
@@ -155,48 +155,47 @@ const TabsComponent = () => {
         </Row>
         
       </div>
-
-      <div className="slider-container1  align-items-center">
+      <pre></pre><pre></pre>
+      <div className='slider-container1'>
       <div className='sliderCont2'><h2 className='text123'>Наши бизнес-партнеры</h2>
        <Row>
         
-       <Card className="partner-card1">
-          
-          <Card.Body className='cardBody'>
-            <Card.Title className='logoText'>Лого компании</Card.Title>
-            <Card.Text className='mainText' style ={{color:'black'}}> Много текста про компанию, либо про человека, мб его цитата.</Card.Text>
-          </Card.Body>
-        </Card>
-        
-        
-        <Card className="partner-card1">
-          
-          <Card.Body className='cardBody'>
-            <Card.Title className='logoText'>Лого компании</Card.Title>
-            <Card.Text className='mainText' style ={{color:'black'}}> Много текста про компанию, либо про человека, мб его цитата.</Card.Text>
-          </Card.Body>
-        </Card>
-        
-        <Card className="partner-card1">
-          
-          <Card.Body className='cardBody'>
-            <Card.Title className='logoText'>Лого компании</Card.Title>
-            <Card.Text className='mainText'> Много текста про компанию, либо про человека, мб его цитата.</Card.Text>
-          </Card.Body>
-        </Card>
-        
-        
-        <Card className="partner-card1">
-          
-          <Card.Body className='cardBody'>
-            <Card.Title className='logoText'>Лого компании</Card.Title>
-            <Card.Text className='mainText' > Много текста про компанию, либо про человека, мб его цитата.</Card.Text>
-          </Card.Body>
-        </Card>
+    
      
+        <Col xs={3}>
+        <Card className="partner-card1">
+          
+          <Card.Body className='cardBody'>
+            <Card.Title className='logoText'>Tele 2</Card.Title>
+            <Card.Text className='mainText' style ={{color:'black'}}>Российская телекоммуникационная компания, базируется на собственной инфраструктуре, работает с 2003 года</Card.Text>
+          </Card.Body>
+        </Card>
+        </Col>
+        <Col xs={3}>
+        <Card className="partner-card1">
+          
+          <Card.Body className='cardBody'>
+            <Card.Title className='logoText'>АО «Информатика»</Card.Title>
+            <Card.Text className='mainText'> Компания, занимающаяся разработкой программного обеспечения уже более 67 лет. Мы являемся экспертами в сфере автоматизированных систем управления предприятием.</Card.Text>
+          </Card.Body>
+        </Card>
+        </Col>
+        <Col xs={3}>
+        <Card className="partner-card1">
+          
+          <Card.Body className='cardBody'>
+            <Card.Title className='logoText'>Нейрософт</Card.Title>
+            <Card.Text className='mainText' > Производитель медицинского диагностического оборудования для нейрофизиологии, функциональной диагностики, аудиологии и реабилитации.
+
+        </Card.Text>
+          </Card.Body>
+        </Card>
+        </Col>
+        
         </Row>
         </div>
-      </div>
+       </div>
+
         <div className='backColorFAQ1'>
         <div className='styleFAQ'>
           <pre> </pre>

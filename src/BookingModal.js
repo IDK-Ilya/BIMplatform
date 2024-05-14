@@ -4,12 +4,12 @@ import axios from 'axios';
 
 const BookingModal = ({ show, onHide }) => {
   const [bookingData, setBookingData] = useState({
-    hall: '',
-    startDate: '',
-    startTime: '',
-    endDate: '',
-    endTime: '',
-    fullName: '',
+    name2: '',
+    start_time2: '',
+    start_date2: '',
+    end_time2: '',
+    end_date2: '',
+    FIO: '',
     contact: '',
     email: ''
   });
@@ -22,28 +22,39 @@ const BookingModal = ({ show, onHide }) => {
       ...prev,
       [name]: value
     }));
-    setSuccess(false); // Сбрасываем сообщение об успехе при изменении полей
+    setSuccess(false); // Reset success message on input change
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // Проверяем, что дата и время окончания позже даты и времени начала
-    const start = new Date(`${bookingData.startDate}T${bookingData.startTime}`);
-    const end = new Date(`${bookingData.endDate}T${bookingData.endTime}`);
+  
+    // Проверка, что дата и время окончания позже даты и времени начала
+    const start = new Date(`${bookingData.start_date2}T${bookingData.start_time2}`);
+    const end = new Date(`${bookingData.end_date2}T${bookingData.end_time2}`);
     if (end <= start) {
-      setError('Дата и время окончания должны быть позже даты и времени начала.');
+      setError('Дата и время окончания должны быть после даты и времени начала.');
       return;
     }
-    setError(''); // Очищаем сообщение об ошибке
-
+  
+    setError(''); // Очистка предыдущих ошибок
+ 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/add_works', bookingData);
-      console.log('Booking Response:', response.data);
-      setSuccess(true);
-      onHide(); // Закрываем модальное окно после успешной отправки
+      const response = await axios.post('http://127.0.0.1:8000/check_room_availability', JSON.stringify(bookingData), {
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
+
+      if (response.status === 200) {
+        setSuccess(true);
+        onHide(); // Закрытие модального окна при успешной бронировании
+      } else {
+        setError('Ошибка бронирования: ' + ( 'Выбранные дата и время заняты'));
+        setSuccess(false);
+      }
     } catch (error) {
-      console.error('Error booking hall:', error);
-      setError('Ошибка при бронировании: ' + error.message);
+      
+      setError('Ошибка при бронировании: ' + ('Выбранные дата и время заняты'));
       setSuccess(false);
     }
   };
@@ -61,8 +72,8 @@ const BookingModal = ({ show, onHide }) => {
             <Form.Label>Доступные залы</Form.Label>
             <Form.Control
               as="select"
-              name="hall"
-              value={bookingData.hall}
+              name="name2"
+              value={bookingData.name2}
               onChange={handleInputChange}
               required>
               <option>Выберите зал</option>
@@ -76,15 +87,15 @@ const BookingModal = ({ show, onHide }) => {
             <Form.Label>Дата начала</Form.Label>
             <Form.Control
               type="date"
-              name="startDate"
-              value={bookingData.startDate}
+              name="start_date2"
+              value={bookingData.start_date2}
               onChange={handleInputChange}
               required />
             <Form.Label>Время начала</Form.Label>
             <Form.Control
               type="time"
-              name="startTime"
-              value={bookingData.startTime}
+              name="start_time2"
+              value={bookingData.startTime2}
               onChange={handleInputChange}
               required />
           </Form.Group>
@@ -92,15 +103,15 @@ const BookingModal = ({ show, onHide }) => {
             <Form.Label>Дата окончания</Form.Label>
             <Form.Control
               type="date"
-              name="endDate"
-              value={bookingData.endDate}
+              name="end_date2"
+              value={bookingData.end_date2}
               onChange={handleInputChange}
               required />
             <Form.Label>Время окончания</Form.Label>
             <Form.Control
               type="time"
-              name="endTime"
-              value={bookingData.endTime}
+              name="end_time2"
+              value={bookingData.end_time2}
               onChange={handleInputChange}
               required />
           </Form.Group>
@@ -108,9 +119,9 @@ const BookingModal = ({ show, onHide }) => {
             <Form.Label>ФИО</Form.Label>
             <Form.Control
               type="text"
-              name="fullName"
+              name="FIO"
               placeholder="Введите ФИО"
-              value={bookingData.fullName}
+              value={bookingData.FIO}
               onChange={handleInputChange}
               required />
           </Form.Group>

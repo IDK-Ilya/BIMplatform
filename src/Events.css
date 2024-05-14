@@ -1,97 +1,84 @@
-.eventBlock{
+.eventBlock {
     max-height: fit-content;
-}
-.eventTitle{
+    margin-bottom: 2px;
+  }
+  .eventTitle {
     text-align: center;
-}
-.posCard {
+  }
+  .posCard {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Выравнивание по центру */
-
+    justify-content: center; /* Центрирование по центру */
   }
-.posCard .card {
+  
+  .posCard .card {
     width: 18rem;
-    margin: 0 10px; /* Добавляем небольшие отступы между карточками */
+    margin: 0 10px; /* Отступы между карточками */
     margin-bottom: 35px;
-    background: linear-gradient(to bottom right,#1D58C0, #151718); /* Радиальный градиент от синего к темно-серому */
-    color: #ffffff; /* Белый цвет текста для лучшей читаемости на темном фоне */
-    border-radius: 15px; /* Скругление углов карточки */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для добавления глубины */
-    overflow: hidden; /* Скрытие переполняющего контента */
-    height: 350px;
-}
-
-.posCard .card-body {
+    background: linear-gradient(to bottom right, #1D58C0, #151718); /* Градиент от синего к темно-серому */
+    color: #ffffff; /* Белый текст */
+    border-radius: 15px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень */
+    overflow: hidden; /* Скрытие элементов, выходящих за границы */
+    height: 350px; /* Высота карточки */
+  }
+  
+  .posCard .card-body {
     width: 100%;
-    text-align: center; /* Центрируем содержимое */
-}
-.btn-container1 {
+    text-align: center; /* Центрирование текста */
+    height: 300px;
+    background: linear-gradient(to bottom right, #1D58C0, #151718); /* Градиент от синего к темно-серому */
+    color: white;
+  }
+  
+  .btn-container1 {
     position: absolute;
     bottom: 10px;
     left: 50%;
-    transform: translateX(-50%);
-    
-}
-
-.posCard .btn-container, .btn-container1 {
-    margin-top: 20px; /* Добавляем отступ между текстом и кнопкой */
-}
-
-.posCard .btnSetting, .btn-container1 .btnSettingEvents {
-    width: 100%; /* Растягиваем кнопку по ширине */
-    background-color: #000; /* Фон кнопки черный */
-    color: #000; /* Текст кнопки белый */
-    border: none; /* Убираем границу кнопки */
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.btn-container1 .btnSettingEvents{
-    background-color: white; /* Уточнение для кнопки в контейнере .btn-container1 */
-}
-
-.btn-container1 .btnSettingEventsk{
-    background-color: white; /* Уточнение для кнопки в контейнере .btn-container1 */
-}
-
-.posCard .btnSettingEvents:hover {
-    background-color: #1D58C0; /* Изменение фона*/
-
-}
-
-
-.eventCardImg{
+    transform: translateX(-50%); /* Центрирование кнопки */
+  }
+  
+  .posCard .btnSettingEvents, .btn-container1 .btnSettingEvents {
+    width: 100%; /* Кнопка на всю ширину */
+    background-color: white; /* Фон кнопки */
+    color: black; /* Цвет текста кнопки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Скругление кнопки */
+    margin-bottom: 10px; /* Отступ снизу */
+  }
+  
+  .posCard .btnSettingEvents:hover {
+    background-color: #1D58C0; /* Фон при наведении */
+  }
+  
+  .eventCardImg {
     width: 100px;
-    border-radius: 50%;
-    padding-top: 5px;
-}
-
-.eventHeadContainer {
-
+    border-radius: 50%; /* Круглое изображение */
+    padding-top: 5px; /* Отступ сверху */
+  }
+  
+  .eventHeadContainer {
     display: flex;
-    align-items: center; /* Центрирует содержимое по вертикали */
-    justify-content: left; /* Выравнивает содержимое по левому краю */
-    height: 100px; /* Примерная высота контейнера, настраивайте по вашему усмотрению */
-    padding-left: 5px; /* Отступ слева для отступа текста от края */
-    
-}
-
-
-.eventHead{
-    font-size: 21px;
-    text-align: left;
-}
-
-.eventBody {
-    text-align: left; /* Выравнивание текста по левому краю */
-    padding-left: 10px; /* Добавление небольшого отступа слева, если нужно */
-}
-
-.eventBody h2, .eventBody h4 {
-    margin: 0; /* Удаление стандартных отступов у заголовков для более тесного расположения */
-}
-
-.colorTime{
-    color:#7EA8F9;
-}
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: left; /* Выравнивание содержимого по левому краю */
+    height: 100px; /* Высота контейнера */
+    padding-left: 5px; /* Отступ слева */
+  }
+  
+  .eventHead {
+    font-size: 31px; /* Размер шрифта заголовка */
+  }
+  
+  .eventBody {
+    text-align: left; /* Текст выравнивается по левому краю */
+    padding-left: 10px; /* Отступ слева */
+  }
+  
+  .eventBody h2, .eventBody h4 {
+    margin: 0; /* Убираем отступы у заголовков */
+  }
+  
+  .colorTime {
+    color: #7EA8F9; /* Светло-голубой цвет времени */
+  }
+  

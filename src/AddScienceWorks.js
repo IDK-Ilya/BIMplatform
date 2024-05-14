@@ -34,7 +34,7 @@ const AddWorkForm = ({ onAdd, onClose }) => {
     formData.append('file', file);  // Добавляем только файл, так как другие данные идут в URL
     
     // Создаем URL с параметрами
-    const url = `http://127.0.0.1:8000/operations/upload_science?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+    const url = `https://appmvp.onrender.com/operations/upload_science?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
   
     try {
       const response = await axios.post(url, formData, {
@@ -97,7 +97,7 @@ const WorksDisplay = () => {
   useEffect(() => {
     const fetchWorks = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/operations/download_science_all');
+        const response = await axios.get('https://appmvp.onrender.com/operations/download_science_all');
         if (Array.isArray(response.data)) {
           setWorks(response.data);
         } else {

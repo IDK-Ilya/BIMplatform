@@ -14,15 +14,15 @@ export default class BussinesPatners extends Component {
       <div className='bussPart'>
         <Accordion  >
         <Accordion.Item eventKey="0">
-            <Accordion.Header className = ''><img className = 'card1' src={card1}></img> <h2>Tele 2</h2> <p className='cardText'>Российская телекоммуникационная компания</p></Accordion.Header>
+            <Accordion.Header className = ''><img className = 'card1' src={card1}></img><h2   style={{marginLeft:'10px', marginRight:'175px'}} className='textBord'>Tele 2</h2> <p className='cardText'>Российская телекоммуникационная компания</p></Accordion.Header>
             <Accordion.Body className = ''>
             <p>Мы создаем альтернативу сложившимся рыночным практикам. Мы несем новое качество жизни потребителям мобильных услуг: честные, прозрачные, выгодные предложения, высококачественные партнерские программы и услуги.</p>
 
             <p>	Адрес и телефон офиса Tele2
-108811, г. Москва, поселение Московский, Киевское шоссе 22-й километр, домовладение 6, строение 1 </p>
-<p>
-тел. +7 495 229 84 00
- </p>
+            108811, г. Москва, поселение Московский, Киевское шоссе 22-й километр, домовладение 6, строение 1 </p>
+            <p>
+            тел. +7 495 229 84 00
+            </p>
             </Accordion.Body>
         </Accordion.Item>
         </Accordion></div>
@@ -30,7 +30,7 @@ export default class BussinesPatners extends Component {
         <div className='bussPart'>
         <Accordion  >
         <Accordion.Item eventKey="0">
-            <Accordion.Header className = ''><img className = 'card1' src={card2}></img> <h2>АО Информатика</h2> <p className='cardText'>IT - компания в Иваново по разработке ПО</p></Accordion.Header>
+            <Accordion.Header className = ''><img className = 'card1' src={card2}></img> <h2  style={{marginLeft:'10px', marginRight:'-6px'}}>АО Информатика</h2> <p className='cardText'>IT - компания в Иваново по разработке ПО</p></Accordion.Header>
             <Accordion.Body className = ''>
             <p>Разрабатывать ИННОВАЦИОННОЕ программное обеспечение, которое обеспечивает динамичное развитие бизнеса предприятий и эффективную работу их персонала, используя весь накопленный опыт и КРЕАТИВНОЕ мышление наших сотрудников. Стать ЛИДЕРОМ в области разработки автоматизированных систем управления, инженерной и деловой векторной графики.</p>
             <p>
@@ -53,7 +53,8 @@ export default class BussinesPatners extends Component {
         <div className='bussPart'>
         <Accordion  >
         <Accordion.Item eventKey="0">
-            <Accordion.Header className = ''><img className = 'card1' src={card3}></img> <h2>Нейрософт</h2> <p className='cardText'>Производитель медицинского диагностического оборудования </p></Accordion.Header>
+            <Accordion.Header className = ''><img className = 'card1' src={card3}></img> <h2   style={{marginLeft:'10px', marginRight:'92px'}}>Нейрософт</h2> <p className='cardText'>Производитель медицинского диагностического оборудования </p></Accordion.Header>
+           <div>
             <Accordion.Body className = ''>
             <p>Объединяя людей, знания и технологии, мы воплощаем новейшие достижения науки в доступных решениях для практической медицины на всех континентах.</p>
             <p>Адрес: Россия, 153032, г. Иваново, ул. Воронина, д. 5 </p>
@@ -62,6 +63,7 @@ export default class BussinesPatners extends Component {
             <p> Учебный центр: +7 (4932) 59-33-44 study@neurosoft.com </p>
             <p> Отдел кадров +7 (4932) 58-79-79 rabota@neurosoft.ru terra@neurosoft.ru </p>
             </Accordion.Body>
+            </div>
         </Accordion.Item>
         </Accordion></div>
         <pre></pre>

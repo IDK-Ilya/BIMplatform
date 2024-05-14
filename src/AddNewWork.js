@@ -12,7 +12,7 @@ const WorkItem = ({ work, onDelete }) => (
       <Card.Title>{work.title}</Card.Title>
       <Card.Text>{work.description}</Card.Text>
       {/* Используем ID каждой работы для формирования уникальной ссылки на скачивание */}
-      <a href={`http://127.0.0.1:8000/opearation/download/${work.id}`} target="_blank" rel="noopener noreferrer">
+      <a href={`https://appmvp.onrender.com/opearation/download/${work.id}`} target="_blank" rel="noopener noreferrer">
         Просмотреть работу
       </a>
     </Card.Body>
@@ -34,7 +34,7 @@ const AddWorkForm = ({ onAdd, onClose }) => {
     formData.append('file', file);  // Добавляем только файл, так как другие данные идут в URL
     
     // Создаем URL с параметрами
-    const url = `http://127.0.0.1:8000/operations/upload?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+    const url = `https://appmvp.onrender.com/operations/upload?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
   
     try {
       const response = await axios.post(url, formData, {
@@ -95,7 +95,7 @@ const WorksDisplay = () => {
   useEffect(() => {
     const fetchWorks = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/operations/download_all');
+        const response = await axios.get('https://appmvp.onrender.com/operations/download_all');
         if (Array.isArray(response.data)) {
           setWorks(response.data);
         } else {

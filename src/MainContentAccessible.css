@@ -34,7 +34,7 @@
   .textstyleT11{
     color: #EADF00;
     text-align: center;
-    font-size: 40px;
+    font-size: 45px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -42,7 +42,7 @@
 .textstyle1{
 color: #EADF00;
 text-align:justify ;
-font-size: 30px;
+font-size: 40px;
 font-family: 'Inter', sans-serif;
 }
 
@@ -151,6 +151,7 @@ font-family: 'Inter', sans-serif;
   color: #fff;
   font-size: 40px;
   font-family: 'Inter', sans-serif;
+  text-align: center;
 }
 
 .registration-block-container1{
@@ -159,7 +160,7 @@ font-family: 'Inter', sans-serif;
 
 .slider-container1{
   background-color: #28002C;
-  height: 400px;
+  height: 500px !important;
   
 }
 .slider-container1 .text123{
@@ -174,6 +175,7 @@ font-family: 'Inter', sans-serif;
   background-color: #44004A ;
   
 }
+
 
 .partner-card1 {
 
@@ -205,4 +207,58 @@ font-family: 'Inter', sans-serif;
   color: white !important;
   font-size: 20px;
   font-family: 'Inter', sans-serif;
+}
+
+.colCard .card-text{
+  color: white;
+}
+
+.zx123{
+  font-family: 'Inter', sans-serif;
+}
+
+/* CSS стили для выравнивания карточек партнеров по центру */
+.slider-container1 {
+  display: flex; /* Делаем контейнер гибким */
+  flex-direction: column; /* Элементы в колонном направлении */
+  align-items: center; /* Центрирование содержимого по горизонтальной оси */
+  width: 100%; /* Полная ширина */
+  height: 350px;
+}
+
+.sliderCont2 {
+  width: 100%; /* Полная ширина для внутреннего контейнера */
+  text-align: center; /* Центрирование заголовка */
+  
+}
+
+.slider-container1 .Row {
+  display: flex; /* Использование flexbox для строки */
+  justify-content: center; /* Центрирование карточек в строке */
+  flex-wrap: wrap; /* Перенос элементов на следующую строку при необходимости */
+}
+
+.partner-card1 {
+  flex: 0 0 auto; /* Базовый размер элемента, не растягивается, не сжимается */
+  margin: 10px; /* Отступы вокруг карточек */
+  height: 350px;
+}
+
+.cardBody {
+  display: flex; /* Используем flexbox для тела карточки */
+  flex-direction: column; /* Содержимое в колонном направлении */
+  align-items: center; /* Центрирование содержимого тела карточки */
+ 
+}
+
+.logoText, .mainText {
+  text-align: center; /* Центрирование текста заголовка и основного текста */
+}
+
+.slider-container1 .card{
+  display: flex; /* Используем flexbox для тела карточки */
+  flex-direction: column; /* Содержимое в колонном направлении */
+  align-items: center; /* Центрирование содержимого тела карточки */
+  margin-left: 50%;
+ 
 }

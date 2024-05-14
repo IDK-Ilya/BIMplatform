@@ -4,7 +4,7 @@ import { Card, Button, Form, Container, Row, Col, Modal } from 'react-bootstrap'
 import { useAuth } from './AuthContext';
 
 const WorkItem = ({ work }) => (
-  <Card className="m-2 contBody" style={{ width: '18rem',  color: 'black' }}>
+  <Card className="m-2 contBody" style={{ width: '18rem',  color: 'black', height:'250px' }}>
     <Card.Body className='colorTextCard'>
       <Card.Title>{work.title}</Card.Title>
       <Card.Text >{work.email}</Card.Text>
@@ -21,7 +21,7 @@ const AddWorkForm = ({ onAdd, onHide }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const newWork = { title, description, email };
-    const response = await axios.post('http://127.0.0.1:8000/add_works', newWork);
+    const response = await axios.post('https://appmvp.onrender.com/add_works', newWork);
     onAdd(response.data);
     setTitle('');
     setDescription('');
@@ -72,7 +72,7 @@ const WorksDisplay = () => {
   useEffect(() => {
     const fetchWorks = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/get_works');
+        const response = await axios.get('https://appmvp.onrender.com/get_works');
         if (Array.isArray(response.data)) {
           setWorks(response.data);
         }

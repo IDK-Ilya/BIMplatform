@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Row, Col, Button, Card,Toast  } from 'react-bootstrap';
-import imgIspu from './imgIspu.png';
+import { Row, Col, Button, Card, Container } from 'react-bootstrap';
+import eventLogo from './лого 1.jpg';
+import eventLogo2 from './лого 2.jpg';
+import eventLogo3 from './лого 3.jpg';
 import './Events.css';
-import RequestEvent from './request/RequestEvent';
-
-import  RegistrationModal from './request/RegistrationOnEventModal'
+import RegistrationModal from './request/RegistrationOnEventModal';
 
 function Events() {
   const [modalShow, setModalShow] = useState(false);
@@ -18,117 +18,65 @@ function Events() {
   const handleCloseModal = () => {
     setModalShow(false);
   };
-  const event = {
-    id: "event1",
-    name: "Профком обучающихся ИГЭУ",
-    time: "26 апреля, 16:00",
-    location: "малый зал"
-  };
+  
+  const events = [
+    {
+      id: "event",
+      name: "Q EVENT",
+      time: "7 мая 2024 18:00",
+      location: "Д-505",
+      logo: eventLogo
+    },
+    {
+      id: "event1",
+      name: "БИМ",
+      time: "8-15 мая 2024",
+      location: "Гибридный формат",
+      logo: eventLogo2
+    },
+    {
+      id: "event2",
+      name: "PowerQ",
+      time: "23-26 августа 2024",
+      location: "Рубское озеро",
+      logo: eventLogo3
+    }
+  ];
 
-
-  const handleOpenModal1 = (eventId) => {
-    setSelectedEventId(eventId);
-    setModalShow(true);
-  };
-  
-  const handleCloseModal1 = () => {
-    setModalShow(false);
-  };
-  const event1 = {
-    id: "event1",
-    name: "Профком обучающихся ИГЭУ",
-    time: "26 апреля, 16:00",
-    location: "малый зал"
-  };
-  
-  
-  
   return (
-    <div className='eventBlock'> 
-      <div className='eventTitle'><h1>Май 2024</h1></div>
-      <pre></pre>
-     
-      <div>
-      <Row>
-      <Col xs={5}> 
-        <div className='posCard '> 
-          <Row>
-            <Col>
-            <Card style={{ width: '18rem' }}>
-          <Card.Body>
-            <Card.Text>
-              <Row>
-                <Col xs={5}>
-                  <img src={imgIspu} alt="" className='eventCardImg' />
-                </Col>
-                <Col xs={7}>
-                  <div className='eventHeadContainer'>
-                    <h2 className='eventHead'>{event.name}</h2>
-                  </div>
-                </Col>
-              </Row>
-              <pre></pre>
-              <Row>
-                <div className='eventBody '>
-                  <h2>{event.time}</h2>
-                  <h4>{event.location}</h4>
-                </div>
-              </Row>
-            </Card.Text>
-            <div className="btn-container1">
-            <Button className='btnSettingEvents' onClick={() => handleOpenModal(event.id)}>Регистрация</Button>
-          <RegistrationModal show={modalShow} onHide={handleCloseModal} eventId={selectedEventId} />
-            </div>
-          
-          </Card.Body>
-          </Card>
-            </Col>
-          </Row>
-          </div>
- 
-        </Col>
-        <Col xs ={5}>
-       <div className='posCard '> 
+    <div className='eventBlock '>
+      <h1 className='eventTitle'>Май 2024</h1>
+      <Container>
         <Row>
-          <Col>
-          <Card style={{ width: '18rem' }}>
-        <Card.Body>
-          <Card.Text>
-            <Row>
-              <Col xs={5}>
-                <img src={imgIspu} alt="" className='eventCardImg' />
-              </Col>
-              <Col xs={7}>
-                <div className='eventHeadContainer'>
-                  <h2 className='eventHead'>{event.name}</h2>
-                </div>
-              </Col>
-            </Row>
-            <pre></pre>
-            <Row>
-              <div className='eventBody '>
-                <h2>{event.time}</h2>
-                <h4>{event.location}</h4>
-              </div>
-            </Row>
-          </Card.Text>
-          <div className="btn-container1">
-          <Button className='btnSettingEvents' onClick={() => handleOpenModal1(event.id)}>Регистрация</Button>
-        <RegistrationModal show={modalShow} onHide={handleCloseModal1} eventId={selectedEventId} />
-          </div>
-        
-        </Card.Body>
-      </Card>
-      </Col>
-      </Row>
-      
-      </div>
-      </Col>
-      </Row>
-      </div>
- 
+          {events.map((event) => (
+            <Col xs={12} md={4} key={event.id}>
+              <Card className='posCard' style={{ width: '100%' }}>
+                <Card.Body>
+                  <Row noGutters>
+                    <Col xs={5}>
+                      <img src={event.logo} alt="" className='eventCardImg' />
+                    </Col>
+                    <Col xs={7}>
+                      <div className='eventHeadContainer'>
+                        <h2 className='eventHead'>{event.name}</h2>
+                      </div>
+                    </Col>
+                  </Row>
+                  <div className='eventBody'>
+                    <h2>{event.time}</h2>
+                    <h4>{event.location}</h4>
+                  </div>
+                  <div className="btn-container1">
+                    <Button className='btnSettingEvents' onClick={() => handleOpenModal(event.id)}>Регистрация</Button>
+                  </div>
+                </Card.Body>
+              </Card>
+              <RegistrationModal show={modalShow} onHide={handleCloseModal} eventId={selectedEventId} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </div>
-   
   );
 }
 
