@@ -3,9 +3,10 @@ import { Modal, Button, Col, Row, Card, Container } from 'react-bootstrap';
 
 
 import "./modal1.css";
-import img1 from "./коворкинг 1.jpeg";
-import img2 from "./коворкинг 1-1.jpeg";
-import img3 from "./коворкинг 1-2.jpeg";
+import img1 from "./мини зал.jpg";
+import img2 from "./мини зал 1.jpg";
+import img3 from "./минизал 2.jpg";
+import img4 from "./минизал 3.jpg";
 
 const Modal3 = ({ show, onHide }) => {
 
@@ -25,7 +26,7 @@ const Modal3 = ({ show, onHide }) => {
       
     <Modal show={show} onHide={onHide}  centered  size ='xl'>
       <Modal.Header closeButton className='openCardStyle'>
-        <h4 style={{fontSize:'35px', fontWeight:'bold'}}>Коворкинг</h4> 
+        <h4 style={{fontSize:'35px', fontWeight:'bold'}}>Малый зал</h4> 
       </Modal.Header>
       <Modal.Body>
        <Row>
@@ -66,7 +67,7 @@ const Modal3 = ({ show, onHide }) => {
        <h2 className="CoworkTextSyle2">Фотографии</h2>
        <Col xs = {3}><img className="cardImg2" src={img2}/></Col>
        <Col xs = {3}><img  className="cardImg2"src={img3}/></Col>
-    
+       <Col xs = {3}><img  className="cardImg2"src={img4}/></Col>
  
         
        </Row>

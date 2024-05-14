@@ -53,6 +53,8 @@ import companyLogo1 from './лого 4.jpg';
 import companyLogo2 from './лого 5.jpg';
 import companyLogo3 from './лого 6.jpg';
 
+import BookingModal from './BookingModal';
+
 const sliderSettings = {
   dots: true,
   infinite: true,
@@ -95,9 +97,10 @@ const coworkingBanner = <div ><Container fluid className="coworking-banner" >
     </Col>
     </Row> 
     
-</Container><div className="btn-container"><Button  className='btnSetting'>Записаться</Button></div></div>;
+</Container></div>
 
 const eventsBanner = <div><Container fluid className='event-banner'>
+  
   <Row className="justify-content-center align-items-center">
   <Col xs={12} md={8} >
   <h2 className='textCowork'>Мероприятия</h2>
@@ -221,7 +224,7 @@ const TabsComponent = () => {
         return null;
     }
   };
-
+  const [modalShow, setModalShow] = useState(false);
 
   return (
     <div>
@@ -411,8 +414,15 @@ const TabsComponent = () => {
           <Tab eventKey="coworking" title="Коворкинг"  >
           <div style={{ width: '100%' }} className='cardStyle justify-content-center align-items-center'>
             <h1 className="coworkingHead">Залы в кампусе БИМ</h1>
+            </div>
             <pre> </pre>
+            
+          <div style={{marginLeft:'50%', marginBottom:'15px'}}>    
+          <Button className='btnSetting' onClick={() => setModalShow(true)}>Записаться</Button>
+          <BookingModal show={modalShow} onHide={() => setModalShow(false)} />
+        </div>
             <div className='zone' style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+              
               <Card style={{ marginBottom: '20px' }}>
                 <Card.Body>
                  
@@ -484,9 +494,7 @@ const TabsComponent = () => {
                 </Card.Body>
               </Card>
         </div>
-        </div>
-
-
+  
         </Tab>
         <Tab eventKey="events" title="Мероприятия">
             <Events />

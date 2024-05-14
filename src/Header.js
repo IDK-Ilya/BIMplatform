@@ -15,28 +15,6 @@ const Header = () => {
     navigate('/login'); // Перенаправляем на страницу входа после выхода
   };
 
-  useEffect(() => {
-    const fetchName = async () => {
-      try {
-        const response = await axios.get('https://cors-anywhere.herokuapp.com/https://93e2-62-33-49-119.ngrok-free.app/unprotected-route', {
-        
-          
-        });
-        console.log('Response data:', response.data);
-        setUser(response.data); // Обновление состояния пользователя в контексте
-      } catch (error) {
-        console.error('Error fetching user data:', error);
-      }
-    };
-
-    if (isAuthenticated) {
-      fetchName();
-    }
-  }, [isAuthenticated, setUser]); 
-
-
-
-
   return (
     <Navbar bg={isAccessible ? "ligth" : "dark"} variant={isAccessible ? "light" : "dark"} expand="lg" className='custom-container'>
             <Container>

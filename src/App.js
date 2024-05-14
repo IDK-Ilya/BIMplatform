@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './AuthContext';
+
 import { AccessibilityProvider, useAccessibility } from './AccessibilityContext';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -14,7 +14,7 @@ import MainContentAccessible from './MainContentAccessible';
 
 import LoginPage from './LoginPage';
 import RegisterPage from './RegisterPage';
-
+import AuthProvider from './AuthContext'; // Importing AuthProvider correctly
 // Styles
 import './Header.css';
 import './Footer.css';

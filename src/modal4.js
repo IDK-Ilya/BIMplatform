@@ -3,9 +3,9 @@ import { Modal, Button, Col, Row, Card, Container } from 'react-bootstrap';
 
 
 import "./modal1.css";
-import img1 from "./коворкинг 1.jpeg";
-import img2 from "./коворкинг 1-1.jpeg";
-import img3 from "./коворкинг 1-2.jpeg";
+import img1 from "./лек 1.jpg";
+import img2 from "./лек 1-1.jpg";
+import img3 from "./лек 1-2.jpg";
 
 const Modal4 = ({ show, onHide }) => {
 
@@ -25,14 +25,14 @@ const Modal4 = ({ show, onHide }) => {
       
     <Modal show={show} onHide={onHide}  centered  size ='xl'>
       <Modal.Header closeButton className='openCardStyle'>
-        <h4 style={{fontSize:'35px', fontWeight:'bold'}}>Коворкинг</h4> 
+        <h4 style={{fontSize:'35px', fontWeight:'bold'}}>Лекторий</h4> 
       </Modal.Header>
       <Modal.Body>
        <Row>
         <Col xs={5}>
           <img src={img1}  className="cardImg1"  width="100%"/>
           <pre></pre>
-          <h2 className="CoworkTextSyle1">проспект Ленина, 21с1</h2>
+          <h2 className="CoworkTextSyle1">Ул. Батурина, 15</h2>
         </Col>
         <Col xs={3}>
         <div>
@@ -55,10 +55,10 @@ const Modal4 = ({ show, onHide }) => {
 
         </Col>
         <Col xs={3}>
-          <h3 style={{fontWeight:'bold', fontSize: '23px',marginTop:'-5px'}}> Вместимость: <span  style={{float:'right', marginLeft:'1px', } }></span>30 человек</h3>
+          <h3 style={{fontWeight:'bold', fontSize: '23px',marginTop:'-5px'}}> Вместимость: <span  style={{float:'right', marginLeft:'1px', } }></span>40 человек</h3>
           <pre></pre>
           <h3 style={{fontWeight:'bold',  fontSize: '23px'}}> Оснащение</h3>
-          <p style = {{fontSize:'23px'}}>Столы, стулья, пуфы, диваны</p>
+          <p style = {{fontSize:'23px'}}>Проекционный экран, проектор, посадочные места, флипчарт, кухня</p>
         </Col>
        </Row>
        <Row  >

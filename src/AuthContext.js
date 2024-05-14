@@ -1,42 +1,54 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import axios from "axios";
+import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => {
-  const [email, setEmail] = useState(() => {
-    // Пытаемся получить email пользователя из localStorage при инициализации
-    const savedEmail = localStorage.getItem('userEmail');
-    console.log('Loading email from localStorage:', savedEmail);
-    return savedEmail;
-  });
+const AuthProvider = ({ children }) => {
+  // State to hold the authentication token
+  const [token, setToken] = useState(localStorage.getItem("token"));
 
-  useEffect(() => {
-    // Следим за изменениями в email и обновляем localStorage
-    console.log('Email state has changed:', email);
-    if (email) {
-      localStorage.setItem('userEmail', email);
-    } else {
-      localStorage.removeItem('userEmail');
-    }
-  }, [email]);
+  // Function to set the authentication token
+  const saveToken = (newToken) => {
+    localStorage.setItem('token', newToken);
+    setToken(newToken);
+    axios.defaults.headers.common["Authorization"] = `Bearer ${newToken}`;
+  };
 
   const login = (userData) => {
-    console.log('Logging in user:', userData);
-    setEmail(userData.email);  // предполагаем, что userData содержит поле email
+    // Here, you should set token based on userData if available
+    // This is a placeholder; implement according to your backend response
+    saveToken(userData.token);
   };
 
   const logout = () => {
-    console.log('Logging out user');
-    setEmail(null);  // Это также вызовет удаление 'userEmail' из localStorage из-за useEffect
+    localStorage.removeItem('token');
+    delete axios.defaults.headers.common["Authorization"];
+    setToken(null);
   };
 
-  const isAuthenticated = email !== null;
+  useEffect(() => {
+    if (token) {
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    } else {
+      delete axios.defaults.headers.common["Authorization"];
+    }
+  }, [token]);
+
+  // Memoized value of the authentication context
+  const contextValue = useMemo(() => ({
+    token,
+    setToken: saveToken,
+    login,
+    logout
+  }), [token]);
 
   return (
-    <AuthContext.Provider value={{ email, isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={contextValue}>
       {children}
     </AuthContext.Provider>
   );
 };
 
 export const useAuth = () => useContext(AuthContext);
+
+export default AuthProvider;
